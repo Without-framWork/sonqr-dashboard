@@ -1,0 +1,45 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+{% set page_title = "products" %} 
+{% include "templates/components/header.njk" %}
+{% include "templates/components/sidebar.njk" %}
+<div class="main-content">
+	<div class="table-card">
+	<div class="table-title">
+		<p>المنتجات</p>
+	</div>
+		<table id="table_id" class="display">
+				<thead>
+						<tr>
+								<th>اسم العميل</th>
+								<th>رقم العميل</th>
+								<th>تاريخ الحجز</th>
+								<th>المدة</th>
+								<th>عدد الأشخاص</th>
+								<th>حالة الحجز</th>
+					
+						</tr>
+				</thead>
+				<tbody>
+
+					{% for i in range(0, 40) -%}
+						<tr>
+							<td>احمد محمد محمود</td>
+							<td>010321456987</td>
+							<td>16/06/2021</td>
+							<td>من 8:00 إلي 10:00</td>
+							<td>3</td>
+							<td>
+								<span class="order-status status-0{{i}}">تم الالغاء</span>
+							</td>
+						</tr>
+					{%- endfor %}
+
+				</tbody>
+		</table>
+	</div>
+</div>
+
+
+{% endblock %}

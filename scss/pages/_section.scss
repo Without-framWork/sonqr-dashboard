@@ -1,0 +1,272 @@
+.proudcts-section {
+  .btn-search {
+    float: left;
+    padding: 0 90px;
+  }
+
+  border-radius: 15px;
+  padding: 13px 0;
+}
+.about-spermarket {
+  display: flex;
+  border: 1px solid #707070;
+  border-radius: 15px;
+  width: 100%;
+  overflow: hidden;
+  min-height: 220px;
+
+  
+  i {
+    font-size: 20px;
+    margin-left: 25px;
+    color: #444444;
+  }
+  a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+.image-chef {
+  position: relative;
+  width: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.supermarket-detils {
+  padding: 30px;
+  width: 50%;
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444444;
+  }
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444444;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.sliderr {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #38e25d;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.sliderr:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  right: 2px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .sliderr:before {
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(26px);
+  transform: translateX(0px);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #38e25d;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #38e25d;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.sliderr.round {
+  border-radius: 34px;
+}
+
+.sliderr.round:before {
+  border-radius: 50%;
+}
+.checks-radio {
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  label {
+    margin-right: 0;
+  }
+
+  .form__radio-input {
+    display: none;
+  }
+
+  .form__label-radio {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    padding-right: 40px;
+    color: #000;
+  }
+
+  .form__radio-button {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #00488f;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00488f;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .form__radio-input:checked ~ .form__label-radio .form__radio-button::after {
+    opacity: 1;
+  }
+}
+.btn-delete {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  display: block;
+  margin-right: auto;
+  margin-left: 15px;
+  &:focus {
+    outline: 0;
+  }
+  i {
+    color: red;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    cursor: pointer;
+  }
+}
+.btn-great {
+  background-color: white;
+  border: 0;
+  border-radius: 14px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid #c2c2c2;
+  margin: 40px 0;
+  color: #00488f;
+  &:focus {
+    outline: 0;
+  }
+  .fas {
+    color: #00488f;
+  }
+}
+.outer-repeater {
+  // display: flex;
+  .form-group {
+    margin-left: 20px;
+  }
+
+  .outer {
+    position: relative;
+    // display: flex;
+    // align-items: center;
+  }
+  input {
+    border-radius: 15px;
+  }
+}
+
+.slider-active {
+  background-color: #38e25d !important ;
+}
+
+.slider-active:before {
+  right: 2px;
+}
+
+input:checked + .slider-active:before {
+  transform: translateX(0px);
+}
+
+.slider-disactive {
+  background-color: #ccc !important;
+}
+
+.slider-disactive:before {
+  left: 2px;
+}
+
+input:checked + .slider-disactive:before {
+  transform: translateX(0px);
+}

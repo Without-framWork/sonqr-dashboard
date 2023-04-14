@@ -1,0 +1,706 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+<div class="main-content">
+  <div class="order-infro mt-5">
+    <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="tab-13"
+          data-toggle="tab"
+          href="#content-13"
+          role="tab"
+          aria-controls="content-13"
+          aria-selected="true"
+        >
+          الأقسام
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="tab-14"
+          data-toggle="tab"
+          href="#content-14"
+          role="tab"
+          aria-controls="content-14"
+          aria-selected="true"
+        >
+          إضافة المنتجات
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="tab-15"
+          data-toggle="tab"
+          href="#content-15"
+          role="tab"
+          aria-controls="content-15"
+          aria-selected="true"
+        >
+          عرض قائمة المنتجات
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="content-13"
+      role="tabpane-13"
+      aria-lab
+      elledby="tab-13"
+    >
+      <div class="proudct-Carousel owl-carousel owl-theme mb-5">
+        <div class="item city-infro">
+          <h4>منتجات الصيدلية</h4>
+          <div class="details-city">
+            <div class="work">
+              <span class="number-Works"> 500 </span>
+              <p class="status">الكل</p>
+            </div>
+            <div class="not-work">
+              <span class="number-Works">400</span>
+
+              <p class="status">
+                <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+
+                متوفر
+              </p>
+            </div>
+            <div class="total-works">
+              <div class="infro-total-work">
+                <span class="number-Works"> 100 </span>
+                <p class="status">
+                  <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+                  غير متوفر
+                </p>
+              </div>
+            </div>
+            <div class="chart-01"></div>
+          </div>
+        </div>
+        <div class="item city-infro">
+          <h4>منتجات المطاعم</h4>
+          <div class="details-city">
+            <div class="work">
+              <span class="number-Works"> 500 </span>
+              <p class="status">الكل</p>
+            </div>
+            <div class="not-work">
+              <span class="number-Works">400</span>
+
+              <p class="status">
+                <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+
+                متوفر
+              </p>
+            </div>
+            <div class="total-works">
+              <div class="infro-total-work">
+                <span class="number-Works"> 100 </span>
+                <p class="status">
+                  <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+                  غير متوفر
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item city-infro">
+          <h4>منتجات السوبر ماركت</h4>
+          <div class="details-city">
+            <div class="work">
+              <span class="number-Works"> 500 </span>
+              <p class="status">الكل</p>
+            </div>
+            <div class="not-work">
+              <span class="number-Works">400</span>
+
+              <p class="status">
+                <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+
+                متوفر
+              </p>
+            </div>
+            <div class="total-works">
+              <div class="infro-total-work">
+                <span class="number-Works"> 100 </span>
+                <p class="status">
+                  <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+                  غير متوفر
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proudcts-section mb-5">
+        <div class="proudct-Carousel owl-carousel owl-theme">
+          <div class="about-spermarket">
+            <div class="image-chef">
+              <img src="assets/images/11739.jpg" alt="" srcset="" />
+            </div>
+            <div class="supermarket-detils">
+              <h3>السوبر ماركت</h3>
+              <p>ترتيب <span>1</span></p>
+              <span class="icon-cog">
+                <a href="#"> <i class="fas fa-cogs"></i> </a>
+              </span>
+
+              <a href="#">اتخاذ اجراء</a>
+            </div>
+          </div>
+          <div class="about-spermarket">
+            <div class="image-chef">
+              <img src="assets/images/sunbird-straws-1.jpg" alt="" srcset="" />
+            </div>
+            <div class="supermarket-detils">
+              <h3>السوبر ماركت</h3>
+              <p>ترتيب <span>1</span></p>
+              <span class="icon-cog">
+                <a href="#"> <i class="fas fa-cogs"></i> </a>
+              </span>
+
+              <a href="#">اتخاذ اجراء</a>
+            </div>
+          </div>
+          <div class="about-spermarket">
+            <div class="image-chef">
+              <img src="assets/images/filqesvz.jpg" alt="" srcset="" />
+            </div>
+            <div class="supermarket-detils">
+              <h3>السوبر ماركت</h3>
+              <p>ترتيب <span>1</span></p>
+              <span class="icon-cog">
+                <a href="#"> <i class="fas fa-cogs"></i> </a>
+              </span>
+
+              <a href="#">اتخاذ اجراء</a>
+            </div>
+          </div>
+          <div class="about-spermarket">
+            <div class="image-chef">
+              <img src="assets/images/pharmacy-logo-7092a6c9df-seeklogo.com.png" alt="" srcset="" />
+            </div>
+            <div class="supermarket-detils">
+              <h3>السوبر ماركت</h3>
+              <p>ترتيب <span>1</span></p>
+              <span class="icon-cog">
+                <a href="#"> <i class="fas fa-cogs"></i> </a>
+              </span> 
+
+              <a href="#">اتخاذ اجراء</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link btn-block "
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                <i class="fas fa-caret-left rotate-icon"></i>
+                إضافة قسم جديد
+              </button>
+            </h2>
+          </div>
+
+          <div
+            id="collapseOne"
+            class="collapse show"
+            aria-labelledby="headingOne"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+              <div class="additions">
+                <div class="proudcts-section">
+                  <div class="row mb-5">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label> اسم القسم </label>
+
+                        <input type="text" class="form-control" />
+                      </div>
+                      <div class="form-group">
+                        <label> الترتيب </label>
+
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>الوصف </label>
+                        <textarea class="form-control" rows="3"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <h3 class="title-image">صورة المحل</h3>
+
+                      <div class="choose-image choose-image-md">
+                        <div class="picture">
+                          <img
+                            src="assets/images/tyler-nix-PQeoQdkU9jQ-1024x1024.jpg"
+                            class="picture-src"
+                          />
+                        </div>
+                        <div class="select-image">
+                          <p>لتحميل الصورة اضغط هنا</p>
+                          <span class="camera-icon">
+                            <i class="fas fa-camera"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="addition-buttons">
+                    <h4>اضافه التصنيف الفرعي</h4>
+                    <form action="" class="repeater">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-md-9">
+                              <!-- <div class="row">
+                                <div class="col-md-4"> <div class="form-group">
+                                  <label> اسم القسم </label>
+                                  <input type="text" class="form-control" />
+                                </div></div>
+                                <div class="col-md-4"> <div class="form-group">
+                                  <label> اسم القسم </label>
+                                  <input type="text" class="form-control" />
+                                </div></div>
+                                <div class="col-md-4"> <div class="form-group">
+                                  <label> اسم القسم </label>
+                                  <input type="text" class="form-control" />
+                                </div></div>
+                              </div> -->
+                              <div
+                                data-repeater-list="outer-group"
+                                class="outer row"
+                              >
+                                <div data-repeater-item class="outer col-md-4">
+                                  <div class="form-group">
+                                    <label> اسم القسم </label>
+                                    <input type="text" class="form-control" />
+                                  </div>
+                                  <button
+                                    data-repeater-delete
+                                    type="button"
+                                    class="btn-delete"
+                                  >
+                                    <i class="fas fa-times"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <button
+                                data-repeater-create
+                                type="button"
+                                class="btn-great btn-block"
+                              >
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <button
+                      type="submit"
+                      class="btn-search btn btn-primary btn-lg float-left"
+                    >
+                      حفظ
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade show"
+      id="content-14"
+      role="tabpane-14"
+      aria-lab
+      elledby="tab-14"
+    >
+      <div class="proudcts-section">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label> اسم القسم </label>
+
+              <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label> الترتيب </label>
+
+              <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label> عنوان </label>
+
+              <select class="form-control">
+                <option>حدد المحافظة</option>
+                <option>مشكلة 2</option>
+                <option>مشكلة 3</option>
+                <option>مشكلة 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label> اسم القسم </label>
+
+              <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label> الترتيب </label>
+
+              <input type="text" class="form-control" />
+            </div>
+            <div class="work-status">
+              <div class="checks-radio">
+                <form action="#">
+                  <h3 class="title-image mb-3">التوافر</h3>
+
+                  <div class="form-group">
+                    <div class="form__radio-group">
+                      <input
+                        type="radio"
+                        name="size"
+                        id="small"
+                        class="form__radio-input"
+                      />
+                      <label
+                        class="form__label-radio"
+                        for="small"
+                        class="form__radio-label"
+                      >
+                        <span class="form__radio-button"></span> متوفر
+                      </label>
+                    </div>
+                    <div class="form__radio-group">
+                      <input
+                        type="radio"
+                        name="size"
+                        id="large"
+                        class="form__radio-input"
+                        checked
+                      />
+                      <label
+                        class="form__label-radio"
+                        for="large"
+                        class="form__radio-label"
+                      >
+                        <span class="form__radio-button"></span> غير متوفر
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label> الوصف </label>
+
+              <textarea class="form-control"></textarea>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <h3 class="title-image">الصورة</h3>
+            <div class="choose-image choose-image-md">
+              <div class="picture">
+                <img
+                  src="assets/images/tyler-nix-PQeoQdkU9jQ-1024x1024.jpg"
+                  class="picture-src"
+                />
+              </div>
+              <div class="select-image">
+                <p>لتحميل الصورة اضغط هنا</p>
+                <span class="camera-icon">
+                  <i class="fas fa-camera"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="addition-buttons">
+          <h3>التسعير</h3>
+          <form action="" class="repeater">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-9">
+                    <!-- <div class="row">
+                      <div class="col-md-4"> <div class="form-group">
+                        <label> اسم القسم </label>
+                        <input type="text" class="form-control" />
+                      </div></div>
+                      <div class="col-md-4"> <div class="form-group">
+                        <label> اسم القسم </label>
+                        <input type="text" class="form-control" />
+                      </div></div>
+                      <div class="col-md-4"> <div class="form-group">
+                        <label> اسم القسم </label>
+                        <input type="text" class="form-control" />
+                      </div></div>
+                    </div> -->
+                    <div data-repeater-list="outer-group" class="outer row">
+                      <div data-repeater-item class="outer col-md-4">
+                        <div class="form-group">
+                          <label> اسم القسم </label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <button
+                          data-repeater-delete
+                          type="button"
+                          class="btn-delete"
+                        >
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <button
+                      data-repeater-create
+                      type="button"
+                      class="btn-great btn-block"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade show"
+      id="content-15"
+      role="tabpane-15"
+      aria-lab
+      elledby="tab-15"
+    >
+      <table class="table  order-table table-responsive-md ">
+        <thead>
+          <tr>
+            <th scope="col">كود الصنف</th>
+            <th scope="col">اسم الصنف</th>
+            <th scope="col">الوصف</th>
+            <th scope="col">الوحدة</th>
+            <th scope="col">الوزن</th>
+            <th scope="col">السعر</th>
+            <th scope="col">صورة المنتج</th>
+            <th scope="col">الأقسام</th>
+            <th scope="col">عدد الاستخدام</th>
+            <th scope="col">عدد مرات البيع</th>
+            <th scope="col">التوافر</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>علبه كشرى وسط</td>
+            <td>علبة</td>
+            <td>1</td>
+            <td>15.75</td>
+            <td>
+              <img
+                class="time"
+                src=" assets/images/image-proudct.png"
+                alt=""
+                srcset=""
+              />
+            </td>
+            <td>17</td>
+            <td>30</td>
+            <td>مطاعم</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>علبه كشرى وسط</td>
+            <td>علبة</td>
+            <td>1</td>
+            <td>15.75</td>
+            <td>
+              <img
+                class="time"
+                src=" assets/images/image-proudct.png"
+                alt=""
+                srcset=""
+              />
+            </td>
+            <td>17</td>
+            <td>30</td>
+            <td>مطاعم</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>علبه كشرى وسط</td>
+            <td>علبة</td>
+            <td>1</td>
+            <td>15.75</td>
+            <td>
+              <img
+                class="time"
+                src=" assets/images/image-proudct.png"
+                alt=""
+                srcset=""
+              />
+            </td>
+            <td>17</td>
+            <td>30</td>
+            <td>مطاعم</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th>#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>علبه كشرى وسط</td>
+            <td>علبة</td>
+            <td>1</td>
+            <td>15.75</td>
+            <td>
+              <img
+                class="time"
+                src=" assets/images/image-proudct.png"
+                alt=""
+                srcset=""
+              />
+            </td>
+            <td>17</td>
+            <td>30</td>
+            <td>مطاعم</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th>#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>علبه كشرى وسط</td>
+            <td>علبة</td>
+            <td>1</td>
+            <td>15.75</td>
+            <td>
+              <img
+                class="time"
+                src=" assets/images/image-proudct.png"
+                alt=""
+                srcset=""
+              />
+            </td>
+            <td>17</td>
+            <td>30</td>
+            <td>مطاعم</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th>#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>علبه كشرى وسط</td>
+            <td>علبة</td>
+            <td>1</td>
+            <td>15.75</td>
+            <td>
+              <img
+                class="time"
+                src=" assets/images/image-proudct.png"
+                alt=""
+                srcset=""
+              />
+            </td>
+            <td>17</td>
+            <td>30</td>
+            <td>مطاعم</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th>#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>علبه كشرى وسط</td>
+            <td>علبة</td>
+            <td>1</td>
+            <td>15.75</td>
+            <td>
+              <img
+                class="time"
+                src=" assets/images/image-proudct.png"
+                alt=""
+                srcset=""
+              />
+            </td>
+            <td>17</td>
+            <td>30</td>
+            <td>مطاعم</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

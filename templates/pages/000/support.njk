@@ -1,0 +1,44 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+{% set page_title = "settings" %} 
+{% include "templates/components/header.njk" %}
+{% include "templates/components/sidebar.njk" %}
+
+<div class="main-content">
+
+
+<form class="common-form">
+	<h2>الدعم</h2>
+  <div class="form-group">
+    <label >الإسم</label>
+    <input type="text" class="form-control"  placeholder="سنقر كفرالشيخ">
+  </div>
+  <div class="form-group">
+    <label>رقم الهاتف</label>
+    <input type="text" class="form-control"  placeholder="0123456789">
+  </div>
+
+  <div class="form-group">
+    <label>نوع المشكلة</label>
+    <select class="form-control">
+      <option>مشكلة 1</option>
+      <option>مشكلة 2</option>
+      <option>مشكلة 3</option>
+      <option>مشكلة 4</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">الرسالة</label>
+    <textarea class="form-control" rows="3">حدث خطأ اثناء طلب توصيل اوردر رقم 254557781</textarea>
+  </div>
+	  <button type="submit" class="btn btn-primary">إرسال</button>
+
+</form>
+</div>
+
+
+{% endblock %}
+
+

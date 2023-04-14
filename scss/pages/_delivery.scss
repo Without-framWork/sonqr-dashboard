@@ -1,0 +1,37 @@
+.delivery-info {
+  // height: 100%;
+  .flyers {
+    border-bottom: 1px solid #c2c2c2;
+  }
+  .nearby-orders {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.image-box {
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+.delivery-details {
+  ul {
+    min-height: 300px;
+    list-style: none;
+    padding: 0;
+    color: #444444;
+    li {
+      margin-bottom: 15px;
+    }
+  }
+  h6 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444444;
+    margin-bottom: 25px;
+  }
+}

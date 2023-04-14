@@ -1,0 +1,54 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+{% set page_title = "settings" %} 
+{% include "templates/components/header.njk" %}
+{% include "templates/components/sidebar.njk" %}
+
+<div class="main-content">
+
+	<div class="row">
+	
+		<div class="col-md-4">
+		
+				<div class="card-box setting-card">
+					<a href="/store-info.html">
+						<div class="card-content">
+							<span class="card-title">بيانات المحل</span>
+							<p class="card-desc">قم بفحص رصيد الطلبات وجميع الكلمات تكتب هنا لحجز مكان الشرح لرصيد الطلبات الخاص بالسكشن</p>
+						</div>
+					</a>
+				</div>
+			
+		</div>
+		<div class="col-md-4">
+			
+				<div class="card-box setting-card">
+					<a href="/store-branches.html">
+						<div class="card-content">
+							<span class="card-title">الفروع</span>
+							<p class="card-desc">قم بفحص رصيد الطلبات وجميع الكلمات تكتب هنا لحجز مكان الشرح لرصيد الطلبات الخاص بالسكشن</p>
+						</div>
+					</a>
+				</div>
+			
+		</div>
+		<div class="col-md-4">
+			
+				<div class="card-box setting-card">
+					<a href="/store-time.html">
+						<div class="card-content">
+							<span class="card-title">مواعيد العمل</span>
+							<p class="card-desc">قم بفحص رصيد الطلبات وجميع الكلمات تكتب هنا لحجز مكان الشرح لرصيد الطلبات الخاص بالسكشن</p>
+						</div>
+					</a>
+				</div>
+		
+		</div>
+
+	</div>
+
+</div>
+
+
+{% endblock %}

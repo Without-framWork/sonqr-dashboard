@@ -1,0 +1,135 @@
+// .common-form {
+//   max-width: 560px;
+//   h2 {
+//     color: #003566;
+//     margin-bottom: 30px;
+//   }
+//   .form-group {
+//     label {
+//       font-size: 18px;
+//       font-weight: 600;
+//     }
+//   }
+//   input.form-control,
+//   select.form-control {
+//     height: 46px;
+
+//     background: #f8f9fa;
+//   }
+//   textarea.form-control {
+//     height: 140px;
+//     background: #f8f9fa;
+//     resize: inherit;
+//   }
+//   .btn-primary {
+//     width: 100%;
+//     height: 50px;
+//     background: #003566;
+//     border-color: #003566;
+//     margin-top: 10px;
+//   }
+// }
+
+// .password-group {
+//   position: relative;
+//   .show-password {
+//     position: absolute;
+//     // width: 20px;
+//     // height: 20px;
+//     // background:gray;
+//     border-radius: 20px;
+//     left: 15px;
+//     top: 12px;
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }
+// }
+
+// .prepare-form {
+//   label {
+//     font-size: 18px;
+//     font-weight: 600;
+//   }
+//   .form-group {
+//     label {
+//       margin-left: 15px;
+//       font-weight: 400;
+//       float: right;
+//     }
+//     input {
+//       // overflow: hidden;
+//       // display: inline-block;
+//       // width: 100%;
+//     }
+//   }
+// }
+
+// .form-check-inline {
+//   margin-right: 0;
+//   margin-left: 0.75rem;
+//   .form-check-input {
+//     margin-right: 0;
+//     margin-left: 0.3125rem;
+//   }
+// }
+
+// .form-check {
+//   .form-check-input {
+//     // position: relative;
+//     // margin-left:0
+//   }
+// }
+
+// .time-form {
+//   .form-check {
+//   }
+//   .form-check-label {
+//     font-size: 20px;
+//   }
+// }
+  .form-group {
+    label {
+      font-size: 20px;
+      font-weight: bold;
+      color: #c7c7c7;
+      line-height: 23px;
+    }
+    .form-control {
+      height: 48px;
+      border-radius: 14px;
+    }
+   textarea{
+    height: 170px !important;
+    resize: inherit;
+
+
+      
+     }
+  }
+  .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    .btn-save-change {
+      position: absolute;
+      top: 23px;
+      right: 0;
+      height: 48px;
+    }
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='blue' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat, repeat;
+      background-position: right .7em top 50%, 0 0;
+      background-size: 35px auto, 100%;
+      cursor: pointer;
+    }
+  }
+  label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }

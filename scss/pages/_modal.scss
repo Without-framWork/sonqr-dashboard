@@ -1,0 +1,262 @@
+.modal-content {
+  border-radius: 57px;
+  padding: 0 30px;
+  .btn-save-change {
+    border: 0;
+    border-radius: 14px;
+    background-color: #00488f;
+    color: #fedd12;
+    padding: 0 50px;
+    height: 53px;
+    line-height: 43px;
+    outline: none;
+    float: left;
+    cursor: pointer;
+  }
+}
+.modal-header {
+  border-bottom: none;
+  h5 {
+    border: 0;
+    font-weight: bold;
+    border-radius: 14px;
+    background-color: #00488f;
+    color: #fedd12;
+    padding: 0 50px;
+    font-size: 25px;
+    margin: auto;
+    line-height: 50px;
+    margin-bottom: 50px;
+  }
+}
+.modal-body {
+  .title-image {
+    color: #c2c2c2 !important;
+  }
+
+  svg {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+  }
+
+  .check {
+    color: #00b427;
+    font-size: 50px;
+  }
+  .title-done {
+    color: #00b427;
+  }
+  .title-wrong,
+  .wrong {
+    color: #ff0000;
+  }
+  .btn-great {
+    border-radius: 10px;
+    padding: 0 20px;
+  }
+
+  h3 {
+    font-size: 25px;
+    color: #f7a21f;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 21px;
+    color: #c7c7c7;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+  }
+
+  justify-content: center;
+
+  .form-control {
+    border-radius: 15px;
+    height: 48px;
+  }
+  .person-infro {
+    margin-top: 50px;
+    border-radius: 14px;
+    border: 1px solid#C2C2C2;
+    padding: 30px 50px;
+  }
+  .person-infro-details {
+    display: flex;
+    border-bottom: 0.5px solid rgba($color: #707070, $alpha: 0.2);
+    align-items: center;
+    padding: 15px 0;
+  }
+  .person-details-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 100px;
+    margin-bottom: 0;
+  }
+  .person-details-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00488f;
+    margin-bottom: 0;
+  }
+}
+.modal-footer {
+  border-top: none;
+
+  .btn-cancel {
+    background-color: #878787 !important;
+    color: #ffffff !important;
+    margin-right: 30px;
+  }
+  .btn-done {
+    background-color: #00b427;
+    color: #ffffff;
+  }
+  .btn-wrong {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+}
+.alerts {
+  margin-top: 100px;
+  i {
+    margin-left: 30px;
+    font-size: 30px;
+  }
+  .check {
+    color: #00b427;
+  }
+  .warning {
+    color: #f7a21f;
+  }
+  .danger {
+    color: #ff0000;
+  }
+  strong {
+    color: #000;
+  }
+
+  .alert-dismissible .close {
+    left: 0;
+    right: auto;
+    color: #000000;
+    opacity: 1;
+    &:focus {
+      outline: none;
+    }
+  }
+  .alert-success {
+    border-bottom: 3px solid #00b427;
+  }
+  .alert-danger {
+    border-bottom: 3px solid #ff0000;
+  }
+  .alert-warning {
+    border-bottom: 3px solid #f7a21f;
+  }
+}
+.modal-xl {
+  max-width: 1200px !important;
+  // margin: auto;
+}
+.list-checkbox {
+  list-style: none;
+  padding: 0;
+  border-right: 1px solid #c2c2c2;
+  padding-right: 50px;
+  height: 100%;
+
+  li {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+  label {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 23px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  h5 {
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+  }
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+  border: 1px solid #c2c2c2;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  border-radius: 3px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    top: 0;
+  }
+}
+input:checked {
+  border-color: #00488f;
+}
+
+input[type="checkbox"]:checked::before {
+  border-right: 2px solid #00488f;
+  border-top: 2px solid #00488f;
+  height: 35%;
+  width: 62%;
+  transform: rotate(130deg) translateY(18%) translateX(-14%);
+}
+
+.add-prouducts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  h3 {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c2c2c2;
+  }
+  .value-button {
+    border: 3px solid #00488f;
+    margin: 0px;
+    outline: none;
+    cursor: pointer;
+  }
+  button {
+    border-radius: 8px;
+    color: #00488f;
+    background-color: #fff;
+    text-align: center;
+    font-size: 22px;
+    width: 35px;
+    height: 35px;
+  }
+  .number {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    padding: 0 25px;
+  }
+}
+.list-checkbox-height {
+  height: auto;
+}

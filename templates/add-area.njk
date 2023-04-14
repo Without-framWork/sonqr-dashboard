@@ -1,0 +1,65 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+<div class="main-content">
+  <a class="link-add" href="">  إضافة مدينة </a>
+  <table class="table order-table ">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">المنطقة</th>
+        <th scope="col">المدينه</th>
+        <th scope="col">المتاجر</th>
+        <th scope="col">اعدادات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">30</th>
+        <td>التجمع</td>
+        <td>القاهرة</td>
+        <td>          <a class="link-additions" href="#">1</a>
+        </td>
+
+        <td>
+          <a href=""><i class="fas fa-cogs"></i></a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">30</th>
+        <td>التجمع</td>
+        <td>القاهرة</td>
+        <td>          <a class="link-additions" href="#">1</a>
+        </td>
+
+        <td>
+          <a href=""><i class="fas fa-cogs"></i></a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">30</th>
+        <td>التجمع</td>
+        <td>القاهرة</td>
+        <td>          <a class="link-additions" href="#">1</a>
+        </td>
+
+        <td>
+          <a href=""><i class="fas fa-cogs"></i></a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">30</th>
+        <td>التجمع</td>
+        <td>القاهرة</td>
+        <td>          <a class="link-additions" href="#">1</a>
+        </td>
+
+        <td>
+          <a href=""><i class="fas fa-cogs"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

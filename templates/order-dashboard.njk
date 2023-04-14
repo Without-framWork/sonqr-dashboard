@@ -1,0 +1,747 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <form class="form-details" data-parsley-validate>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>رقم الطلب</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>معرف المتجر</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>معرف التسليم</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <!-- <div class="form-group">
+          <label>كود العميل</label>
+          <input type="text" class="form-control" />
+        </div> -->
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label> كود العميل</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>بداية التاريخ</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>نهاية التاريخ</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <button type="submit" class="btn-search btn btn-primary btn-block">
+          بحث
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        id="tab-01"
+        data-toggle="tab"
+        href="#content-01"
+        role="tab"
+        aria-controls="content-01"
+        aria-selected="true"
+      >
+        كل المحافظات
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-03"
+        data-toggle="tab"
+        href="#content-03"
+        role="tab"
+        aria-controls="content-03"
+        aria-selected="true"
+        >كفر الشيخ
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-04"
+        data-toggle="tab"
+        href="#content-04"
+        role="tab"
+        aria-controls="content-04"
+        aria-selected="true"
+      >
+        الاسكندريه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-05"
+        data-toggle="tab"
+        href="#content-05"
+        role="tab"
+        aria-controls="content-05"
+        aria-selected="true"
+        >الدقهليه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-06"
+        data-toggle="tab"
+        href="#content-06"
+        role="tab"
+        aria-controls="content-06"
+        aria-selected="true"
+      >
+        البحر الأحمر
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-07"
+        data-toggle="tab"
+        href="#content-07"
+        role="tab"
+        aria-controls="content-07"
+        aria-selected="true"
+      >
+        البحر الأحمر
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-08"
+        data-toggle="tab"
+        href="#content-08"
+        role="tab"
+        aria-controls="content-08"
+        aria-selected="true"
+      >
+        الجيزه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-09"
+        data-toggle="tab"
+        href="#content-09"
+        role="tab"
+        aria-controls="content-09"
+        aria-selected="true"
+        >كفر الشيخ
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-10"
+        data-toggle="tab"
+        href="#content-10"
+        role="tab"
+        aria-controls="content-10"
+        aria-selected="true"
+      >
+        الغربيه
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-10"
+        data-toggle="tab"
+        href="#content-11"
+        role="tab"
+        aria-controls="content-11"
+        aria-selected="true"
+      >
+        المنوفيه
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >كفر الشيخ
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >كفر الشيخ
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="content-01"
+      role="tabpanel"
+      aria-labelledby="tab-01"
+    >
+    <div class="order-item-bigscreen">
+      <div class="row">
+        {% for i in range(0,30) -%}
+        <div class="col-lg-3 col-md-6">
+          <div class="order-item order-pending">
+            <button type="submit" class="btn-detils btn-detils-laotop-show">
+              الدليفري استلم طلبك
+            </button>
+
+            <ul class="order-content order-content-pending">
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content order-content-pending">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content order-content-last border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+               <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="order-item order-complete">
+            <button type="submit" class="btn-detils btn-detils-laotop-show">
+              الدليفري استلم طلبك
+            </button>
+
+            <ul class="order-content">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+              <li class="d-flex justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content order-content-last border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="order-item order-cancel">
+            <div class="button-status">
+              <button type="submit" class="btn-detils btn-detils-laotop-show">
+                الدليفري استلم طلبك
+              </button>
+            </div>
+
+            <ul class="order-content order-content-cancel">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content pt-3 order-content-cancel">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content order-content-last border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="order-item order-urgent">
+            <div class="button-status">
+              <button type="submit" class="btn-detils btn-detils-laotop-show">
+                الدليفري استلم طلبك
+              </button>
+            </div>
+            <ul class="order-content order-content-urgent">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content order-content-urgent">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content order-content-last border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+    <div class="order-item-laptop">
+      <div class="row">
+        {% for i in range(0,30) -%}
+        <div class="col-lg-4 col-md-6">
+          <div class="order-item order-pending">
+            <button type="submit" class="btn-detils btn-detils-laotop-show">
+              الدليفري استلم طلبك
+            </button>
+
+            <ul class="order-content order-content-pending">
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content order-content-pending">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content order-content-last border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+               <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="order-item order-complete">
+            <button type="submit" class="btn-detils btn-detils-laotop-show">
+              الدليفري استلم طلبك
+            </button>
+
+            <ul class="order-content">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+              <li class="d-flex justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content order-content-last border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="order-item order-cancel">
+            <div class="button-status">
+              <button type="submit" class="btn-detils btn-detils-laotop-show">
+                الدليفري استلم طلبك
+              </button>
+            </div>
+
+            <ul class="order-content order-content-cancel">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content pt-3 order-content-cancel">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content order-content-last border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="order-item order-urgent">
+            <div class="button-status">
+              <button type="submit" class="btn-detils btn-detils-laotop-show">
+                الدليفري استلم طلبك
+              </button>
+            </div>
+            <ul class="order-content order-content-urgent">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content order-content-urgent">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content order-content-last border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+      
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-02"
+      role="tabpanel"
+      aria-labelledby="tab-02"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-03"
+      role="tabpanel"
+      aria-labelledby="tab-03"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-04"
+      role="tabpanel"
+      aria-labelledby="tab-04"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-05"
+      role="tabpanel"
+      aria-labelledby="tab-05"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-06"
+      role="tabpanel"
+      aria-labelledby="tab-06"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-07"
+      role="tabpanel"
+      aria-labelledby="tab-07"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-08"
+      role="tabpanel"
+      aria-labelledby="tab-08"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-09"
+      role="tabpanel"
+      aria-labelledby="tab-09"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-10"
+      role="tabpanel"
+      aria-labelledby="tab-10"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-11"
+      role="tabpanel"
+      aria-labelledby="tab-11"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-12"
+      role="tabpanel"
+      aria-labelledby="tab-12"
+    >
+      ...
+    </div>
+  </div>
+  {#
+  <div class="chatbox-holder">
+    <div class="float-btn">
+      <i class="fas fa-envelope"></i>
+      <div class="wrapper">
+        <span class="icon-bar" id="one"></span>
+        <span class="icon-bar" id="thr"></span>
+      </div>
+    </div>
+    <div class="list">
+      <div class="chatbox">
+        <div class="chatbox-top">
+          <div class="chat-group-name">
+            <img src="assets/images/logo-chat.png" alt="" />
+          </div>
+        </div>
+
+        <div class="chat-messages">
+          <button class="btn-chat" onclick="openForm()">
+            <div class="float-btn">
+              <div id="wrapper">
+                <span class="icon-bar" id="one"></span>
+                <span class="icon-bar" id="two"></span>
+                <span class="icon-bar" id="thr"></span>
+              </div>
+            </div>
+            <div class="order-details">
+              <p class="code-order">
+                #2021253<span class="order-current">جاري</span>
+              </p>
+              <p class="time-order">12:30 AM</p>
+            </div>
+            <div class="order-problem mb-0">
+              <p class="text-problem">يوجد مشكله في رقم الطلب</p>
+              <p class="count-problem">2</p>
+            </div>
+          </button>
+          <button class="btn-chat">
+            <div class="order-details">
+              <p class="code-order">
+                #2021253<span class="order-current">جاري</span>
+              </p>
+              <p class="time-order">12:30 AM</p>
+            </div>
+            <div class="order-problem mb-0">
+              <p class="text-problem">يوجد مشكله في رقم الطلب</p>
+              <p class="count-problem">2</p>
+            </div>
+          </button>
+          <button class="btn-chat">
+            <div class="order-details">
+              <p class="code-order">
+                #2021253<span class="order-current order-finished">منتهي</span>
+              </p>
+              <p class="time-order">12:30 AM</p>
+            </div>
+            <div class="order-problem mb-0">
+              <p class="text-problem">يوجد مشكله في رقم الطلب</p>
+              <p class="count-problem">2</p>
+            </div>
+          </button>
+          <button class="btn-chat">
+            <div class="order-details">
+              <p class="code-order">
+                #2021253<span class="order-current">جاري</span>
+              </p>
+              <p class="time-order">12:30 AM</p>
+            </div>
+            <div class="order-problem mb-0">
+              <p class="text-problem">يوجد مشكله في رقم الطلب</p>
+              <p class="count-problem">2</p>
+            </div>
+          </button>
+          <button class="btn-chat">
+            <div class="order-details">
+              <p class="code-order">
+                #2021253<span class="order-current order-finished">منتهي</span>
+              </p>
+              <p class="time-order">12:30 AM</p>
+            </div>
+            <div class="order-problem mb-0">
+              <p class="text-problem">يوجد مشكله في رقم الطلب</p>
+              <p class="count-problem">2</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="chatbox chatbox-massage">
+        <div class="chatbox-top">
+          <div class="chat-group-name">
+            <a href="#"><i class="fas fa-times"></i></a>
+
+            #2021253
+          </div>
+        </div>
+
+        <div class="chat-messages">
+          <div class="message-box-holder">
+            <div class="message-box">أهلاً بك , محمد كيف يمكننا ؟</div>
+          </div>
+
+          <div class="message-box-holder">
+            <div class="message-box message-partner">
+              حدث خطأ أثناء طلبي لخدمه توصيل وأريد استبدالها
+            </div>
+          </div>
+          <div class="message-box-holder">
+            <div class="picture-container mb-0">
+              <div class="picture">
+                <a class="d-inline-block" href="#">
+                  <img src="assets/images/chat-image.png" class="picture-src" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="message-box-holder">
+            <div class="message-box">متى كان وقت طلبك للخدمة ؟</div>
+          </div>
+
+          <div class="message-box-holder">
+            <div class="message-box message-partner">أمس في الساعه 12 ظهرا</div>
+          </div>
+          <div class="message-box-holder">
+            <div class="picture">
+              <a href="#">
+                <img src="assets/images/chat-image.png" class="picture-src" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-input-holder">
+          <textarea class="chat-input" placeholder="اكتب رسالة"></textarea>
+          <a href=""><i class="fas fa-camera"></i></a>
+
+          <button type="submit" class="message-send">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  #}
+</div>
+
+{% endblock %}

@@ -1,0 +1,168 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <div class="accordion">
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button
+            class="btn btn-link btn-block  collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <i class="fas fa-caret-right rotate-icon"></i>
+
+            الفلتر
+          </button>
+        </h2>
+      </div>
+      <div
+        id="collapseTwo"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionExample"
+      >
+        <div class="card-body">
+          <form class="form-details" data-parsley-validate>
+            <div class="row">
+              <div class="col-md-3 ">
+                <div class="form-group">
+                  <label>رقم الطلب</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class=" col-md-3 ">
+                <div class="form-group">
+                  <label>معرف المتجر</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class=" col-md-3 ">
+                <div class="form-group">
+                  <label>معرف التسليم</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class=" col-md-3">
+                <!-- <div class="form-group">
+                    <label>كود العميل</label>
+                    <input type="text" class="form-control" />
+                  </div> -->
+              </div>
+              <div class=" col-md-3 ">
+                <div class="form-group">
+                  <label> كود العميل</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class=" col-md-3 ">
+                <div class="form-group">
+                  <label>بداية التاريخ</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class=" col-md-3 ">
+                <div class="form-group">
+                  <label>نهاية التاريخ</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class=" col-md-3 ">
+                <button
+                  type="submit"
+                  class="btn-search btn btn-primary btn-block"
+                >
+                  بحث
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="link-add" href="#"> إضافة وكيل </a>
+  <a class="customer-numbers" href="#"> عدد الوكلاء <span>100</span></a>
+  <div class="row">
+    {% for i in range(0,10) -%}
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6 ">
+      <div class="client-box agent-box ">
+        <ul class="client-info">
+          <h5>#3</h5>
+          <li>الاسم : <span>الاسم </span></li>
+          <li>الرقم : <span>01069548715 </span></li>
+          <li>عدد الطيارين : <span>8</span></li>
+        </ul>
+        <div class="regions">
+          <h5>المدينة</h5>
+          <div class="row">
+            <div class="col-md-4"><a href="#">حدائق الأهرام</a></div>
+            <div class="col-md-4"><a href="#">مصر الجديدة</a></div>
+            <div class="col-md-4"><a href="#">أكتوبر6 </a></div>
+            <div class="col-md-4"><a href="#">مدينة نصر</a></div>
+            <div class="col-md-4"><a href="#">الجيزة</a></div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-shadow">
+          التفاصيل
+        </button>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 ">
+      <div class="client-box agent-box agent-box ">
+        <ul class="client-info ">
+          <h5>#3</h5>
+          <li>الاسم : <span>الاسم </span></li>
+          <li>الرقم : <span>01069548715 </span></li>
+          <li>عدد الطيارين : <span>8</span></li>
+        </ul>
+        <div class="regions">
+          <h5>المدينة</h5>
+          <div class="row">
+            <div class="col-md-4"><a href="#">حدائق الأهرام</a></div>
+            <div class="col-md-4"><a href="#">مصر الجديدة</a></div>
+            <div class="col-md-4"><a href="#">أكتوبر6 </a></div>
+            <div class="col-md-4"><a href="#">مدينة نصر</a></div>
+            <div class="col-md-4"><a href="#">الجيزة</a></div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-shadow">
+          التفاصيل
+        </button>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 ">
+      <div class="client-box agent-box  ">
+        <ul class="client-info ">
+          <h5>#3</h5>
+          <li>الاسم : <span>الاسم </span></li>
+          <li>الرقم : <span>01069548715 </span></li>
+          <li>عدد الطيارين : <span>8</span></li>
+        </ul>
+        <div class="regions">
+          <h5>المدينة</h5>
+          <div class="row">
+            <div class="col-md-4"><a href="#">حدائق الأهرام</a></div>
+            <div class="col-md-4"><a href="#">مصر الجديدة</a></div>
+            <div class="col-md-4"><a href="#">أكتوبر6 </a></div>
+            <div class="col-md-4"><a href="#">مدينة نصر</a></div>
+            <div class="col-md-4"><a href="#">الجيزة</a></div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-shadow">
+          التفاصيل
+        </button>
+      </div>
+    </div>
+
+    {%- endfor %}
+  </div>
+
+  {% endblock %}
+</div>

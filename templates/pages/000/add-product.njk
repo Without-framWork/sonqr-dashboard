@@ -1,0 +1,121 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+{% set page_title = "settings" %} 
+{% include "templates/components/header.njk" %}
+{% include "templates/components/sidebar.njk" %}
+
+<div class="main-content">
+
+
+<form class="common-form">
+<h2>إضافة منتج جديد</h2>
+
+
+
+
+
+
+  <div class="form-group">
+    <label>إسم المنتج</label>
+    <input type="text" class="form-control"  value="سمك مشوي">
+  </div>
+
+  <div class="form-group">
+    <label>التصنيف</label>
+    <select class="form-control">
+      <option>مأكولات</option>
+      <option>مشروبات</option>
+    </select>
+  </div>
+
+	<div class="form-row">
+    <div class="col-6">
+			<div class="form-group">
+  			<label>التصنيف</label>
+				<select class="form-control">
+					<option>مأكولات</option>
+					<option>مشروبات</option>
+				</select>
+			</div>
+    </div>
+    <div class="col-6">
+			<div class="form-group">
+				<label>سعر المنتج</label>
+				<input type="text" class="form-control">
+			</div>
+    </div>
+  </div>
+
+
+	<div class="form-row">
+    <div class="col-6">
+			<div class="form-group">
+  			<label>وزن المنتج</label>
+				<input type="text" class="form-control">
+
+			</div>
+    </div>
+    <div class="col-6">
+			<div class="form-group">
+				<label>سعر الوزن</label>
+				<input type="text" class="form-control">
+			</div>
+    </div>
+  </div>
+
+
+	<div class="form-row">
+    <div class="col-6">
+			<div class="form-group">
+  			<label>تاريخ توافر المنتج</label>
+				<input class="form-control" data-toggle="datepicker">
+
+			</div>
+    </div>
+    <div class="col-6">
+			<div class="form-group">
+				<label>وقت عرض المنتج</label>
+				<input class="form-control" data-toggle="datepicker">
+			</div>
+    </div>
+  </div>
+
+	<div class="form-group">
+    <label>صورة المنتج</label>
+    <input type="file" class="form-control-file">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">وصف المنتج</label>
+    <textarea class="form-control" rows="3" placeholder="وصف تعريفي عن المنتج ونوعه وطريقه تحضيره"></textarea>
+  </div>
+
+	<h3>الإضافات</h3>
+
+	<div class="form-row">
+    <div class="col-6">
+			<div class="form-group">
+				<label>الاسم</label>
+				<input type="text" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-primary" style="margin-bottom: 1rem;">إضافة عنصر جديد</button>
+    </div>
+    <div class="col-6">
+			<div class="form-group">
+				<label>السعر</label>
+				<input type="text" class="form-control">
+			</div>
+    </div>
+  </div>
+
+	<button type="submit" class="btn btn-primary">إرسال</button>
+
+
+</form>
+</div>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,54 @@
+{% extends "templates/layouts/app.html" %} {% block content %}
+
+<div class="login-page">
+  <div class="login-logo-new">
+    <img src="assets/images/logo-bg.png" alt="" />
+  </div>
+  <div class="log-mobile">
+    <img src="assets/images/login-logo.png" alt="" />
+  </div>
+
+  <form action="" data-parsley-validate>
+    <div class="login-content-new">
+      <div class="login-card-new">
+        <form class="login-form-1 position-relative">
+          <h2>تسجيل الدخول</h2>
+
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+
+            <input type="email" class="form-control" id="username" required />
+          </div>
+          <div class="form-group position-relative">
+            <label> كلمة المرور</label>
+
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              required
+            />
+          </div>
+          <div class="form-group form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >حفظ كلمه المرور</label
+            >
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn-search btn-block">
+              تسجيل الدخول
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </form>
+
+  <p class="copyrights-new">جميع الحقوق محفوظة لشركة sonqr @ 2021</p>
+</div>
+{% endblock %}

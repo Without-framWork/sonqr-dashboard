@@ -1,0 +1,835 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %}
+ {% include
+"templates/components/sidebar.njk" %} 
+
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="main-Carousel owl-carousel owl-theme mb-5">
+        <div class="item city-infro">
+          <h4>منتجات الصيدلية</h4>
+          <div class="details-city">
+            <div class="work">
+              <span class="number-Works"> 500 </span>
+              <p class="status">الكل</p>
+            </div>
+            <div class="not-work">
+              <span class="number-Works">400</span>
+
+              <p class="status">
+                <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+
+                متوفر
+              </p>
+            </div>
+            <div class="total-works">
+              <div class="infro-total-work">
+                <span class="number-Works"> 100 </span>
+                <p class="status">
+                  <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+                  غير متوفر
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item city-infro">
+          <h4>منتجات المطاعم</h4>
+          <div class="details-city">
+            <div class="work">
+              <span class="number-Works"> 500 </span>
+              <p class="status">الكل</p>
+            </div>
+            <div class="not-work">
+              <span class="number-Works">400</span>
+
+              <p class="status">
+                <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+
+                متوفر
+              </p>
+            </div>
+            <div class="total-works">
+              <div class="infro-total-work">
+                <span class="number-Works"> 100 </span>
+                <p class="status">
+                  <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+                  غير متوفر
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item city-infro">
+          <h4>منتجات السوبر ماركت</h4>
+          <div class="details-city">
+            <div class="work">
+              <span class="number-Works"> 500 </span>
+              <p class="status">الكل</p>
+            </div>
+            <div class="not-work">
+              <span class="number-Works">400</span>
+
+              <p class="status">
+                <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+
+                متوفر
+              </p>
+            </div>
+            <div class="total-works">
+              <div class="infro-total-work">
+                <span class="number-Works"> 100 </span>
+                <p class="status">
+                  <span> <i class="fa fa-circle" aria-hidden="true"></i> </span>
+                  غير متوفر
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <form action="#" class="code-form">
+        <div class="form-group">
+          <label> ادخل كود المحل </label>
+          <input type="text" class="mb-4 form-control" />
+        </div>
+        <button type="submit" class="btn-search btn-block">بحث</button>
+      </form>
+    </div>
+  </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        id="tab-01"
+        data-toggle="tab"
+        href="#content-01"
+        role="tab"
+        aria-controls="content-01"
+        aria-selected="true"
+      >
+        كل المحافظات
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-03"
+        data-toggle="tab"
+        href="#content-03"
+        role="tab"
+        aria-controls="content-03"
+        aria-selected="true"
+        >كفر الشيخ
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-04"
+        data-toggle="tab"
+        href="#content-04"
+        role="tab"
+        aria-controls="content-04"
+        aria-selected="true"
+      >
+        الاسكندريه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-05"
+        data-toggle="tab"
+        href="#content-05"
+        role="tab"
+        aria-controls="content-05"
+        aria-selected="true"
+        >الدقهليه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-06"
+        data-toggle="tab"
+        href="#content-06"
+        role="tab"
+        aria-controls="content-06"
+        aria-selected="true"
+      >
+        البحر الأحمر
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-07"
+        data-toggle="tab"
+        href="#content-07"
+        role="tab"
+        aria-controls="content-07"
+        aria-selected="true"
+      >
+        البحر الأحمر
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-08"
+        data-toggle="tab"
+        href="#content-08"
+        role="tab"
+        aria-controls="content-08"
+        aria-selected="true"
+      >
+        الجيزه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-09"
+        data-toggle="tab"
+        href="#content-09"
+        role="tab"
+        aria-controls="content-09"
+        aria-selected="true"
+        >كفر الشيخ
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-10"
+        data-toggle="tab"
+        href="#content-10"
+        role="tab"
+        aria-controls="content-10"
+        aria-selected="true"
+      >
+        الغربيه
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-10"
+        data-toggle="tab"
+        href="#content-11"
+        role="tab"
+        aria-controls="content-11"
+        aria-selected="true"
+      >
+        المنوفيه
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >كفر الشيخ
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >كفر الشيخ
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="content-01"
+      role="tabpanel"
+      aria-labelledby="tab-01"
+    >
+      <div class="order-infro mt-5">
+        <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="tab-13"
+              data-toggle="tab"
+              href="#content-13"
+              role="tab"
+              aria-controls="content-13"
+              aria-selected="true"
+            >
+              المنصة
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="tab-14"
+              data-toggle="tab"
+              href="#content-14"
+              role="tab"
+              aria-controls="content-14"
+              aria-selected="true"
+            >
+              الخريطة
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="tab-15"
+              data-toggle="tab"
+              href="#content-15"
+              role="tab"
+              aria-controls="content-15"
+              aria-selected="true"
+            >
+              إضافة محل جديد
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="content-13"
+          role="tabpane-13"
+          aria-lab
+          elledby="tab-13"
+        >
+          <div class="accordion">
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button
+                    class="btn btn-link btn-block  collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <i class="fas fa-caret-right rotate-icon"></i>
+
+                    الفلتر
+                  </button>
+                </h2>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse"
+                aria-labelledby="headingTwo"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  <form class="form-details" data-parsley-validate>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>رقم الطلب</label>
+                          <input type="text" class="form-control" required />
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>معرف المتجر</label>
+                          <input type="text" class="form-control" required />
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>معرف التسليم</label>
+                          <input type="text" class="form-control" required />
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <!-- <div class="form-group">
+                        <label>كود العميل</label>
+                        <input type="text" class="form-control" />
+                      </div> -->
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label> كود العميل</label>
+                          <input type="text" class="form-control" required />
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>بداية التاريخ</label>
+                          <input type="text" class="form-control" required />
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>نهاية التاريخ</label>
+                          <input type="text" class="form-control" required />
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <button
+                          type="submit"
+                          class="btn-search btn btn-primary btn-block"
+                        >
+                          بحث
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="table order-table platform-table table-responsive-md">
+            <thead>
+              <tr>
+                <th scope="col">كود المحل</th>
+                <th scope="col">اسم المحل</th>
+                <th scope="col">اسم المالك</th>
+                <th scope="col">هاتف المالك</th>
+                <th scope="col">نوع المحل</th>
+                <th scope="col">القسم الرئيسي</th>
+                <th scope="col">رقم المنتج</th>
+                <th scope="col">رقم العروض</th>
+                <th scope="col">أرقام الطلبات</th>
+                <th scope="col">حالة العمل</th>
+                <th scope="col">حالة</th>
+                <th scope="col">الاعدادات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">#35225</th>
+                <td>صيدلية د.ميشيل</td>
+                <td>صيدلية د.ميشيل</td>
+                <td>01036478975</td>
+                <td>صيدلية</td>
+                <td>الصيدليات ومستحضرات التجميل</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td><a class="works-status" href="">مغلق</a></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <a href=""><i class="fas fa-cogs"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">#35225</th>
+                <td>صيدلية د.ميشيل</td>
+                <td>صيدلية د.ميشيل</td>
+                <td>01036478975</td>
+                <td>صيدلية</td>
+                <td>الصيدليات ومستحضرات التجميل</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td><a class="works-status works-status-lg " href="">مشغول</a></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider slider-active round"></span>
+                  </label>
+                </td>
+                <td>
+                  <a href=""><i class="fas fa-cogs"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">#35225</th>
+                <td>صيدلية د.ميشيل</td>
+                <td>صيدلية د.ميشيل</td>
+                <td>01036478975</td>
+                <td>صيدلية</td>
+                <td>الصيدليات ومستحضرات التجميل</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td><a class="works-status" href="">مشغول</a></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider slider-disactive round"></span>
+                  </label>
+                </td>
+                <td>
+                  <a href=""><i class="fas fa-cogs"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">#35225</th>
+                <td>صيدلية د.ميشيل</td>
+                <td>صيدلية د.ميشيل</td>
+                <td>01036478975</td>
+                <td>صيدلية</td>
+                <td>الصيدليات ومستحضرات التجميل</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td><a class="works-status " href="">مشغول</a></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <a href=""><i class="fas fa-cogs"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">#35225</th>
+                <td>صيدلية د.ميشيل</td>
+                <td>صيدلية د.ميشيل</td>
+                <td>01036478975</td>
+                <td>صيدلية</td>
+                <td>الصيدليات ومستحضرات التجميل</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td><a class="works-status" href="">مشغول</a></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <a href=""><i class="fas fa-cogs"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">#35225</th>
+                <td>صيدلية د.ميشيل</td>
+                <td>صيدلية د.ميشيل</td>
+                <td>01036478975</td>
+                <td>صيدلية</td>
+                <td>الصيدليات ومستحضرات التجميل</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td><a class="works-status" href="">مغلق</a></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <a href=""><i class="fas fa-cogs"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div
+          class="tab-pane fade show"
+          id="content-14"
+          role="tabpane-14"
+          aria-lab
+          elledby="tab-14"
+        >
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+                width="100%"
+                height="800px"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
+              <a href="https://getasearch.com/nordvpn-coupon/"></a><br />
+              <style>
+                .mapouter {
+                  position: relative;
+                  text-align: right;
+                  height: 480px;
+                  width: 100%;
+                }
+              </style>
+              <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+              <style>
+                .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                  height: 480px;
+                  width: 100%;
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show"
+          id="content-15"
+          role="tabpane-15"
+          aria-lab
+          elledby="tab-15"
+        ></div>
+      </div>
+      <!-- <div class="row">
+        {% for i in range(0,8) -%}
+        <div class="col-md-3">
+          <div class="order-item order-pending">
+            <ul class="order-content order-content-pending">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content order-content-pending">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex  justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>
+                العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span>
+              </li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">
+              التفاصيل
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="order-item order-complete">
+            <ul class="order-content">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+              <li class="d-flex  justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>
+                العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span>
+              </li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">
+              التفاصيل
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="order-item order-cancel">
+            <ul class="order-content order-content-cancel">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content pt-3 order-content-cancel">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex  justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>
+                العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span>
+              </li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">
+              التفاصيل
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="order-item order-urgent">
+            <ul class="order-content order-content-urgent">
+              <h5>#4035552</h5>
+
+              <li>عربه التسوق</li>
+              <li>01:23 , <span>4-10-2021 </span></li>
+
+              <button type="submit" class="btn-detils">
+                الدليفري استلم طلبك
+              </button>
+            </ul>
+            <ul class="order-content order-content-urgent">
+              <h5>العميل<span class="mr-2"> #4035552</span></h5>
+
+              <li class="d-flex  justify-content-between">
+                مني مصطفي<span class="client-number">01069548715</span>
+              </li>
+            </ul>
+            <ul class="order-content border-bottom-0 mb-4">
+              <h5>التوصيل</h5>
+              <li>اسم المحل : <span>القواس - #718 </span></li>
+              <li>اسم الدليفري : : <span>محمد محمد </span></li>
+              <li>المسافة : <span>المسافة : 7 كم </span></li>
+              <li>
+                العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span>
+              </li>
+            </ul>
+            <button type="submit" class="btn-detils btn-block">
+              التفاصيل
+            </button>
+          </div>
+        </div>
+        {%- endfor %}
+      </div> -->
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-02"
+      role="tabpanel"
+      aria-labelledby="tab-02"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-03"
+      role="tabpanel"
+      aria-labelledby="tab-03"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-04"
+      role="tabpanel"
+      aria-labelledby="tab-04"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-05"
+      role="tabpanel"
+      aria-labelledby="tab-05"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-06"
+      role="tabpanel"
+      aria-labelledby="tab-06"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-07"
+      role="tabpanel"
+      aria-labelledby="tab-07"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-08"
+      role="tabpanel"
+      aria-labelledby="tab-08"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-09"
+      role="tabpanel"
+      aria-labelledby="tab-09"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-10"
+      role="tabpanel"
+      aria-labelledby="tab-10"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-11"
+      role="tabpanel"
+      aria-labelledby="tab-11"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-12"
+      role="tabpanel"
+      aria-labelledby="tab-12"
+    >
+      ...
+    </div>
+  </div>
+</div>
+
+{% endblock %}

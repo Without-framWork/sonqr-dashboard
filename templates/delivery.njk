@@ -1,0 +1,528 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <div class="accordion">
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button
+            class="btn btn-link btn-block collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <i class="fas fa-caret-right rotate-icon"></i>
+
+            الفلتر
+          </button>
+        </h2>
+      </div>
+      <div
+        id="collapseTwo"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionExample"
+      >
+        <div class="card-body">
+          <form class="form-details" data-parsley-validate>
+            <div class="row">
+              <div class="  col-lg-3 col-md-6">
+                <div class="form-group">
+                  <label>رقم الطلب</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="  col-lg-3 col-md-6">
+                <div class="form-group">
+                  <label>معرف المتجر</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="  col-lg-3 col-md-6">
+                <div class="form-group">
+                  <label>معرف التسليم</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="  col-lg-3 col-md-6">
+                <!-- <div class="form-group">
+                <label>كود العميل</label>
+                <input type="text" class="form-control" />
+              </div> -->
+              </div>
+              <div class="  col-lg-3 col-md-6">
+                <div class="form-group">
+                  <label> كود العميل</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="  col-lg-3 col-md-6">
+                <div class="form-group">
+                  <label>بداية التاريخ</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="  col-lg-3 col-md-6">
+                <div class="form-group">
+                  <label>نهاية التاريخ</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="  col-lg-3 col-md-6">
+                <button
+                  type="submit"
+                  class="btn-search btn btn-primary btn-block"
+                >
+                  بحث
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        id="tab-01"
+        data-toggle="tab"
+        href="#content-01"
+        role="tab"
+        aria-controls="content-01"
+        aria-selected="true"
+      >
+        كل المحافظات
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-03"
+        data-toggle="tab"
+        href="#content-03"
+        role="tab"
+        aria-controls="content-03"
+        aria-selected="true"
+        >كفر الشيخ
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-04"
+        data-toggle="tab"
+        href="#content-04"
+        role="tab"
+        aria-controls="content-04"
+        aria-selected="true"
+      >
+        الاسكندريه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-05"
+        data-toggle="tab"
+        href="#content-05"
+        role="tab"
+        aria-controls="content-05"
+        aria-selected="true"
+        >الدقهليه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-06"
+        data-toggle="tab"
+        href="#content-06"
+        role="tab"
+        aria-controls="content-06"
+        aria-selected="true"
+      >
+        البحر الأحمر
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-07"
+        data-toggle="tab"
+        href="#content-07"
+        role="tab"
+        aria-controls="content-07"
+        aria-selected="true"
+      >
+        البحر الأحمر
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-08"
+        data-toggle="tab"
+        href="#content-08"
+        role="tab"
+        aria-controls="content-08"
+        aria-selected="true"
+      >
+        الجيزه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-09"
+        data-toggle="tab"
+        href="#content-09"
+        role="tab"
+        aria-controls="content-09"
+        aria-selected="true"
+        >كفر الشيخ
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-10"
+        data-toggle="tab"
+        href="#content-10"
+        role="tab"
+        aria-controls="content-10"
+        aria-selected="true"
+      >
+        الغربيه
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-10"
+        data-toggle="tab"
+        href="#content-11"
+        role="tab"
+        aria-controls="content-11"
+        aria-selected="true"
+      >
+        المنوفيه
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >كفر الشيخ
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >كفر الشيخ
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="content-01"
+      role="tabpanel"
+      aria-labelledby="tab-01"
+    >
+      <div class="row">
+        <div class="  col-lg-3 col-md-6">
+          <div class="poilt-infro delivery-info">
+            <div class="flyers">
+              <div class="delivery-details">
+                <ul>
+                  <h6>#125</h6>
+
+                  <li>الاسم : <span>محمد محمد</span></li>
+                  <li>الرقم :<span>01069548715</span></li>
+                  <li>النوع : <span>ذكر</span></li>
+                  <li>تاريخ الميلاد : <span>27-9-2021</span></li>
+                  <li>المنطقة : <span> كفر الشيخ</span></li>
+                  <li>الوظيفة : <span> وظيفة مجانية</span></li>
+                </ul>
+              </div>
+              <div class="image-box">
+                <img src=" assets/images/image-flyer.png" alt="" srcset="" />
+              </div>
+            </div>
+
+            <div class="order-status">
+              <div class="order-nots">
+                <p>الحالية</p>
+                <span>5</span>
+              </div>
+              <div class="order-complete">
+                <p>المنفذ</p>
+                <span>2</span>
+              </div>
+              <div class="order-cancel m-0">
+                <p>الملغى</p>
+                <span>12</span>
+              </div>
+            </div>
+            <div class="nearby-orders">
+              <h5>الطلبات الحالية</h5>
+              <div class="code-order">
+                <a href="">#4035552</a>
+                <a href="">#4035552</a>
+                <a href="">#4035552</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" col-lg-3 col-md-6">
+          <div class="poilt-infro delivery-info">
+            <div class="flyers">
+              <div class="delivery-details">
+                <ul>
+                  <h6>#125</h6>
+
+                  <li>الاسم : <span>محمد محمد</span></li>
+                  <li>الرقم :<span>01069548715</span></li>
+                  <li>النوع : <span>ذكر</span></li>
+                  <li>تاريخ الميلاد : <span>27-9-2021</span></li>
+                  <li>المنطقة : <span> كفر الشيخ</span></li>
+                  <li>الوظيفة : <span> وظيفة مجانية</span></li>
+                </ul>
+              </div>
+              <div class="image-box">
+                <img src=" assets/images/image-flyer.png" alt="" srcset="" />
+              </div>
+            </div>
+
+            <div class="order-status">
+              <div class="order-nots">
+                <p>الحالية</p>
+                <span>5</span>
+              </div>
+              <div class="order-complete">
+                <p>المنفذ</p>
+                <span>2</span>
+              </div>
+              <div class="order-cancel m-0">
+                <p>الملغى</p>
+                <span>12</span>
+              </div>
+            </div>
+            <div class="nearby-orders">
+              <h5>الطلبات الحالية</h5>
+              <div class="code-order">
+                <a href="">#4035552</a>
+                <a href="">#4035552</a>
+                <a href="">#4035552</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="  col-lg-3 col-md-6">
+          <div class="poilt-infro delivery-info">
+            <div class="flyers">
+              <div class="delivery-details">
+                <ul>
+                  <h6>#125</h6>
+
+                  <li>الاسم : <span>محمد محمد</span></li>
+                  <li>الرقم :<span>01069548715</span></li>
+                  <li>النوع : <span>ذكر</span></li>
+                  <li>تاريخ الميلاد : <span>27-9-2021</span></li>
+                  <li>المنطقة : <span> كفر الشيخ</span></li>
+                  <li>الوظيفة : <span> وظيفة مجانية</span></li>
+                </ul>
+              </div>
+              <div class="image-box">
+                <img src=" assets/images/image-flyer.png" alt="" srcset="" />
+              </div>
+            </div>
+
+            <div class="order-status">
+              <div class="order-nots">
+                <p>الحالية</p>
+                <span>5</span>
+              </div>
+              <div class="order-complete">
+                <p>المنفذ</p>
+                <span>2</span>
+              </div>
+              <div class="order-cancel m-0">
+                <p>الملغى</p>
+                <span>12</span>
+              </div>
+            </div>
+            <div class="nearby-orders">
+              <h5>الطلبات الحالية</h5>
+              <div class="code-order">
+                <a href="">#4035552</a>
+                <a href="">#4035552</a>
+                <a href="">#4035552</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="  col-lg-3 col-md-6">
+          <div class="poilt-infro delivery-info">
+            <div class="flyers">
+              <div class="delivery-details">
+                <ul>
+                  <h6>#125</h6>
+
+                  <li>الاسم : <span>محمد محمد</span></li>
+                  <li>الرقم :<span>01069548715</span></li>
+                  <li>النوع : <span>ذكر</span></li>
+                  <li>تاريخ الميلاد : <span>27-9-2021</span></li>
+                  <li>المنطقة : <span> كفر الشيخ</span></li>
+                  <li>الوظيفة : <span> وظيفة مجانية</span></li>
+                </ul>
+              </div>
+              <div class="image-box">
+                <img src=" assets/images/image-flyer.png" alt="" srcset="" />
+              </div>
+            </div>
+
+            <div class="order-status">
+              <div class="order-nots">
+                <p>الحالية</p>
+                <span>5</span>
+              </div>
+              <div class="order-complete">
+                <p>المنفذ</p>
+                <span>2</span>
+              </div>
+              <div class="order-cancel m-0">
+                <p>الملغى</p>
+                <span>12</span>
+              </div>
+            </div>
+            <div class="nearby-orders">
+              <h5>الطلبات الحالية</h5>
+              <div class="code-order">
+                <a href="">#4035552</a>
+                <a href="">#4035552</a>
+                <a href="">#4035552</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-02"
+      role="tabpanel"
+      aria-labelledby="tab-02"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-03"
+      role="tabpanel"
+      aria-labelledby="tab-03"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-04"
+      role="tabpanel"
+      aria-labelledby="tab-04"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-05"
+      role="tabpanel"
+      aria-labelledby="tab-05"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-06"
+      role="tabpanel"
+      aria-labelledby="tab-06"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-07"
+      role="tabpanel"
+      aria-labelledby="tab-07"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-08"
+      role="tabpanel"
+      aria-labelledby="tab-08"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-09"
+      role="tabpanel"
+      aria-labelledby="tab-09"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-10"
+      role="tabpanel"
+      aria-labelledby="tab-10"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-11"
+      role="tabpanel"
+      aria-labelledby="tab-11"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-12"
+      role="tabpanel"
+      aria-labelledby="tab-12"
+    >
+      ...
+    </div>
+  </div>
+</div>
+
+{% endblock %}

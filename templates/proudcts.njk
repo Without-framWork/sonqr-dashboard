@@ -1,0 +1,196 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <div class="main-Carousel owl-carousel owl-theme">
+    <div class="item city-infro">
+      <h4>منتجات الصيدليه</h4>
+      <div class="details-city">
+        <div class="work">
+          <span class="number-Works"> 400 </span>
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          <p class="status">متوفر</p>
+        </div>
+        <div class="not-work">
+          <span class="number-Works">100</span>
+
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          <p class="status">غير متوفر</p>
+        </div>
+        <div class="total-works">
+          <div class="infro-total-work">
+            <span class="number-Works"> 500 </span>
+            <p class="status">عدد الاصناف</p>
+          </div>
+          <div class="chart"></div>
+        </div>
+      </div>
+    </div>
+    <div class="item city-infro">
+      <h4>منتجات المطاعم</h4>
+      <div class="details-city">
+        <div class="work">
+          <span class="number-Works"> 400 </span>
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          <p class="status">متوفر</p>
+        </div>
+        <div class="not-work">
+          <span class="number-Works">100</span>
+
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          <p class="status">غير متوفر</p>
+        </div>
+        <div class="total-works">
+          <div class="infro-total-work">
+            <span class="number-Works"> 500 </span>
+            <p class="status">عدد الاصناف</p>
+          </div>
+          <div class="chart"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item city-infro">
+      <h4>منتجات السوبر ماركت</h4>
+      <div class="details-city">
+        <div class="work">
+          <span class="number-Works"> 400 </span>
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          <p class="status">متوفر</p>
+        </div>
+        <div class="not-work">
+          <span class="number-Works">100</span>
+
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          <p class="status">غير متوفر</p>
+        </div>
+        <div class="total-works">
+          <div class="infro-total-work">
+            <span class="number-Works"> 500 </span>
+            <p class="status">عدد الاصناف</p>
+          </div>
+          <div class="chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="additions">
+        <div class="proudcts-section">
+          <h4>الأقسام الموجودة</h4>
+          <div class="proudct-Carousel owl-carousel owl-theme">
+            <div class="about-spermarket">
+              <div class="supermarket-detils">
+                <h3>السوبر ماركت</h3>
+                <div class="ranking">
+                  <p>ترتيب</p>
+                  <span>1</span>
+                </div>
+                <a href="#">اتخاذ اجراء</a>
+              </div>
+              <div class="image-chef">
+                <img src="assets/images/chef-image.png" alt="" srcset="" />
+                <span class="icon-cog">
+                  <a href="#"> <i class="fas fa-cogs"></i> </a>
+                </span>
+              </div>
+            </div>
+            <div class="about-spermarket">
+              <div class="supermarket-detils">
+                <h3>السوبر ماركت</h3>
+                <div class="ranking">
+                  <p>ترتيب</p>
+                  <span>1</span>
+                </div>
+                <a href="#">اتخاذ اجراء</a>
+              </div>
+              <div class="image-chef">
+                <img src="assets/images/chef-image.png" alt="" srcset="" />
+                <span class="icon-cog">
+                  <a href="#"> <i class="fas fa-cogs"></i> </a>
+                </span>
+              </div>
+            </div>
+            <div class="about-spermarket">
+              <div class="supermarket-detils">
+                <h3>السوبر ماركت</h3>
+                <div class="ranking">
+                  <p>ترتيب</p>
+                  <span>1</span>
+                </div>
+                <a href="#">اتخاذ اجراء</a>
+              </div>
+              <div class="image-chef">
+                <img src="assets/images/chef-image.png" alt="" srcset="" />
+                <span class="icon-cog">
+                  <a href="#"> <i class="fas fa-cogs"></i> </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-9 pr-4">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label> الوحدة </label>
+
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label> الوحدة </label>
+
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label> الوحدة </label>
+
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="addition-buttons">
+                <h4>اضافه التصنيف الفرعي</h4>
+
+                <button type="submit" class="btn-addition">مخللات</button>
+                <button type="submit" class="btn-addition">مشروبات</button>
+
+                <button type="submit" class="btn-addition">حلا</button>
+
+                <button type="submit" class="btn-addition">
+                  <i class="plus-icon fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="image-about">
+                <div class="upload-image imge-section mb-5">
+                  <div class="select-image">
+                    <p>لتحميل الصورة اضغط هنا</p>
+                    <span class="camera-icon">
+                      <i class="fas fa-camera"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="save-documents m-auto">
+                  <button type="submit" class="btn-save">اضافه</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+</div>

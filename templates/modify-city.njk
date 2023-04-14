@@ -1,0 +1,64 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <form action="#">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label> الاسم </label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label> الدولة </label>
+          <div class="form-group">
+            <select class="form-control">
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label> الشحن </label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label> تفعيل الشحن </label>
+          <div class="form-group">
+            <select class="form-control">
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label> تفعيل الطلب </label>
+          <div class="form-group">
+            <select class="form-control">
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn-search float-left">حفظ</button>
+  </form>
+</div>
+
+{% endblock %}

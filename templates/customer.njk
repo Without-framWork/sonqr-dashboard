@@ -1,0 +1,153 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <div class="accordion">
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button
+            class="btn btn-link btn-block  collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <i class="fas fa-caret-right rotate-icon"></i>
+
+            الفلتر
+          </button>
+        </h2>
+      </div>
+      <div
+        id="collapseTwo"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionExample"
+      >
+        <div class="card-body">
+          <form class="form-details" data-parsley-validate>
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="form-group">
+                  <label>رقم الطلب</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="form-group">
+                  <label>معرف المتجر</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="form-group">
+                  <label>معرف التسليم</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <!-- <div class="form-group">
+                    <label>كود العميل</label>
+                    <input type="text" class="form-control" />
+                  </div> -->
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="form-group">
+                  <label> كود العميل</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="form-group">
+                  <label>بداية التاريخ</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="form-group">
+                  <label>نهاية التاريخ</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <button
+                  type="submit"
+                  class="btn-search btn btn-primary btn-block"
+                >
+                  بحث
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="link-add" href="#"> إضافة عميل </a>
+  <a class="customer-numbers" href="#"> عدد العملاء <span>100</span></a>
+  <div class="row">
+    {% for i in range(0,10) -%}
+
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="customer-box">
+        <div class="box-header">
+          <h5 class="mb-0">#4035552</h5>
+
+          <label class="switch mb-0">
+            <input type="checkbox" checked class="disactive-content" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="box-content-disactive-content">
+          <div class="box-content">
+            <ul class="client-info">
+              <li>الرقم : <span>01069548715 </span></li>
+              <li>نقاط : <span>0 </span></li>
+              <li>رصيد المحفظة : <span>0 </span></li>
+
+              <li>الطلبات : <span>8 </span></li>
+
+              <li class="status">
+                <p class="successful">
+                  نجاح: <span class="client-number">7</span>
+                </p>
+
+                <p class="cancel">ملغي:<span class="client-number">1</span></p>
+              </li>
+              <li>التاريخ : <span> 4-8-2021 , 01:23 </span></li>
+              <li>آخر نشاط : <span> قبل أسبوع </span></li>
+
+              <li>الحالة : <span>نشط </span></li>
+            </ul>
+            <div class="setting-btns">
+              <h5>الاعدادت</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <a class="link-setting" href="#">بدء محادثة</a>
+                  <a class="link-setting" href="#">ارسال اشعار</a>
+                  <a class="link-setting" href="#">إضافة رصيد</a>
+                  <a class="link-setting" href="#">تعديل</a>
+                </div>
+                <div class="col-md-6">
+                  <a class="link-setting" href="#">الإشعارات</a>
+                  <a class="link-setting" href="#">إضافة نقاط</a>
+                  <button type="submit" class="btn-setting">ارسال رسالة</button>
+
+                  
+                  <a class="link-setting btn-remove" href="#"> حذف </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {%- endfor %}
+  </div>
+
+  {% endblock %}
+</div>

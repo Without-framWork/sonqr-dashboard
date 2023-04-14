@@ -1,0 +1,45 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+{% set page_title = "orders" %} 
+{% include "templates/components/header.njk" %}
+{% include "templates/components/sidebar.njk" %}
+<div class="main-content">
+<button class="btn btn-main">إضافة منتج</button>
+	<div class="table-card">
+	<div class="table-title">
+		<p>المنتجات</p>
+	</div>
+		<table id="table_id" class="display">
+				<thead>
+						<tr>
+								<th>#</th>
+								<th>صورة المنتج</th>
+								<th>اسم المنتج</th>
+								<th>التصنيف</th>
+								<th>التصنيفات الفرعيه</th>
+								<th>نوع المنتج</th>
+								<th>السعر</th>
+						</tr>
+				</thead>
+				<tbody>
+
+					{% for i in range(0, 40) -%}
+						<tr>
+							<td>{{i}}</td>
+							<td></td>
+							<td>سوشي</td>
+							<td>مأكولات</td>
+							<td>مأكولات/اسماك</td>
+							<td>وزني </td>
+							<td>16</td>
+						</tr>
+					{%- endfor %}
+
+				</tbody>
+		</table>
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <section class="shift-page">
+    <h5 class="order-code">إضافة شيفت</h5>
+
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <div class="client-box">
+          <ul class="client-info border-0">
+            <h5>الطيار<span class="mr-2"> #552</span></h5>
+            <li>الاسم : <span>محمد خليل اسماعيل </span></li>
+            <li>رقم الوكيل : <span>01069548715 </span></li>
+            <li>اسم الوكيل : <span>شركة سنيور</span></li>
+            <li>المنطقة : <span> 6 أكتوبر </span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>بداية</label>
+          <div
+            class="input-group date"
+            id="datetimepicker3"
+            data-target-input="nearest"
+          >
+            <input
+              type="text"
+              class="form-control datetimepicker-input"
+              data-target="#datetimepicker3"
+            />
+            <div
+              class="input-group-append"
+              data-target="#datetimepicker3"
+              data-toggle="datetimepicker"
+            >
+              <div class="input-group-text">
+                <i class="fas fa-clock"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>نهاية</label>
+
+          <div
+            class="input-group date"
+            id="datetimepicker3"
+            data-target-input="nearest"
+          >
+            <input
+              type="text"
+              class="form-control datetimepicker-input"
+              data-target="#datetimepicker3"
+            />
+            <div
+              class="input-group-append"
+              data-target="#datetimepicker3"
+              data-toggle="datetimepicker"
+            >
+              <div class="input-group-text">
+                <i class="fas fa-clock"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn-search float-left">حفظ</button>
+  </section>
+</div>
+
+{% endblock %}

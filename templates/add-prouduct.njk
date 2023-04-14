@@ -1,0 +1,673 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="shops-page">
+        <ul class="orders-tab nav nav-tabs mt-0" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" href="#"> بيانات المحل </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> منتجات المحل </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> النظام المالى </a>
+          </li>
+        </ul>
+      </div>
+      <div class="detils-resturant">
+        <div class="name-shop">
+          <p>أبو عوف للمنتجات الغذائية</p>
+          <span>مشويات-لحوم-أخرى </span>
+        </div>
+        <div class="shop-status">
+          <p>حالة المحل</p>
+
+          <label class="switch m-0">
+            <input type="checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+          <span class="active-status"> مفعل </span>
+        </div>
+        <div class="work-status">
+          <p>حالة العمل</p>
+          <div class="checks-radio">
+            <!-- <form action="#"> -->
+            <div class="form-group">
+              <div class="form__radio-group">
+                <input
+                  type="radio"
+                  name="size"
+                  id="small"
+                  class="form__radio-input"
+                />
+                <label
+                  class="form__label-radio"
+                  for="small"
+                  class="form__radio-label"
+                >
+                  <span class="form__radio-button"></span> مشغول
+                </label>
+              </div>
+              <div class="form__radio-group">
+                <input
+                  type="radio"
+                  name="size"
+                  id="large"
+                  class="form__radio-input"
+                  checked
+                />
+                <label
+                  class="form__label-radio"
+                  for="large"
+                  class="form__radio-label"
+                >
+                  <span class="form__radio-button"></span> يعمل
+                </label>
+              </div>
+              <div class="form__radio-group">
+                <input
+                  type="radio"
+                  name="size"
+                  id="v-large"
+                  class="form__radio-input"
+                />
+                <label
+                  class="form__label-radio"
+                  for="v-large"
+                  class="form__radio-label"
+                >
+                  <span class="form__radio-button"></span> مغلق
+                </label>
+              </div>
+            </div>
+            <!-- </form> -->
+            <div class="Reports">
+              <button type="submit" class="btn-reoprts">تحميل التقارير</button>
+              <i class="icon-data fas fa-chart-pie"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fee-prouduct">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="about-prouduct">
+              <ul>
+                <li class="checkbox">
+                  <input
+                    type="checkbox"
+                    name="ch1"
+                    id="ch1"
+                    value="1"
+                    checked="checked"
+                  />
+                  <label for="ch1">نسبة على كل منتج </label>
+                </li>
+                <li class="checkbox">
+                  <input type="checkbox" name="ch2" id="ch2" value="2" />
+                  <label for="ch2">رسوم الخدمة </label>
+                </li>
+                <li class="checkbox">
+                  <input type="checkbox" name="ch3" id="ch3" value="3" />
+                  <label for="ch3">يتم احتساب نسبه من اجمالى الفاتورة</label>
+                </li>
+                <li class="checkbox">
+                  <input type="checkbox" name="ch3" id="ch3" value="3" />
+                  <label for="ch3"> تغير يدوي </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-ratio">
+              <div class="form-group m-0">
+                <label class="m-0">نسبة على كل منتج </label>
+                <input type="text" class="form-control" placeholder="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-ratio">
+              <div class="form-group m-0">
+                <label class="m-0"> اقصي مبلغ مقبول كاش </label>
+                <input type="text" class="form-control" placeholder="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-prouduct">
+    <div class="save-documents float-right mb-3">
+      <button type="submit" class="btn-save btn-salat">سلطه</button>
+    </div>
+    <table class="table order-table">
+      <thead>
+        <tr class="dd">
+          <th scope="col">كود الصنف</th>
+          <th scope="col">اسم الصنف</th>
+
+          <th scope="col">الوصف</th>
+          <th scope="col">الوحدة</th>
+          <th scope="col">الوزن</th>
+          <th scope="col">السعر</th>
+          <th scope="col">صورة المنتج</th>
+          <th scope="col">الأقسام</th>
+          <th scope="col">عدد الاستخدام</th>
+          <th scope="col">عدد مرات البيع</th>
+          <th scope="col">التوافر</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span>سوبر ماركت</span>
+            <span class="section-sonqr">مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-prouduct">
+    <div class="save-documents float-right mb-3">
+      <button type="submit" class="btn-save btn-salat">سلطه</button>
+    </div>
+    <table class="table order-table">
+      <thead>
+        <tr class="dd">
+          <th scope="col">كود الصنف</th>
+          <th scope="col">اسم الصنف</th>
+
+          <th scope="col">الوصف</th>
+          <th scope="col">الوحدة</th>
+          <th scope="col">الوزن</th>
+          <th scope="col">السعر</th>
+          <th scope="col">صورة المنتج</th>
+          <th scope="col">الأقسام</th>
+          <th scope="col">عدد الاستخدام</th>
+          <th scope="col">عدد مرات البيع</th>
+          <th scope="col">التوافر</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span>سوبر ماركت</span>
+            <span class="section-sonqr">مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+        <tr>
+          <th scope="row">32115</th>
+          <td>كشرى التحرير</td>
+          <td>علبه كشرى وسط</td>
+          <td>علبة</td>
+          <td>1</td>
+          <td>10.50</td>
+          <td>
+            <img
+              class="time"
+              src=" assets/images/image-prouduct.png"
+              alt=""
+              srcset=""
+            />
+          </td>
+          <td>
+            <span class="display-block">سوبر ماركت</span>
+            <span>مطاعم </span>
+          </td>
+          <td>15</td>
+          <td>30</td>
+          <td>
+            <div class="detils-resturant mb-0">
+              <div class="shop-status">
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </td>
+
+          <tfoot></tfoot>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  {% endblock %}
+</div>

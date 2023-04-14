@@ -1,0 +1,48 @@
+{% extends "templates/layouts/app.html" %} {% block content %}
+<div class="login-page">
+  <img class="login-bg" src="assets/images/bg.png" alt="" />
+  <div class="login-content">
+    <div class="login-logo">
+      <img src="assets/images/login-logo.png" alt="" />
+    </div>
+
+    <div class="login-card">
+      <form class="login-form position-relative">
+        <div class="form-group">
+          <i class="icon-check fa fa-check-circle" aria-hidden="true"></i>
+
+          <input
+            type="email"
+            class="form-control"
+            id="username"
+            placeholder="Enter your email"
+          />
+          <i class="icon-email fa fa-envelope" aria-hidden="true"></i>
+        </div>
+        <div class="form-group position-relative">
+          <i class="icon-eye fa fa-eye-slash" aria-hidden="true"></i>
+
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+          />
+          <i class="icon-lock fa fa-lock" aria-hidden="true"></i>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input"  />
+          <label class="form-check-label" for="exampleCheck1"
+            >حفظ كلمه المرور</label
+          >
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn-search btn-login">دخول</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <p class="copyrights">جميع الحقوق محفوظة لشركة sonqr @ 2021</p>
+
+  {% endblock %}
+</div>

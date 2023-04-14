@@ -1,0 +1,94 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+    <div class="agents-detail-page">
+        <form action="#">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label> الاسم </label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label> رقم الهاتف </label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label> البريد الإلكتروني </label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label> الرقم السري </label>
+                  <input type="text" class="form-control" />
+                  <a class="icon-eye" href="#">
+                    <img src="assets/images/visible.svg" alt="" />
+                  </a>
+                </div>
+                <div class="form-group">
+                  <label> أقصي عدد من الطلبات في اليوم</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label> أقصي عدد من الطلبات للدليفري في اليوم </label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label> سعر التسليم للطلب </label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h3 class="title-image"> الصورة</h3>
+        
+                <div class="choose-image choose-image-md mb-3">
+                  <div class="picture mw-100">
+                    <img
+                      src="assets/images/tyler-nix-PQeoQdkU9jQ-1024x1024.jpg"
+                      class="picture-src"
+                    />
+                  </div>
+                  <div class="select-image">
+                    <p>لتحميل الصورة اضغط هنا</p>
+                    <span class="camera-icon">
+                      <i class="fas fa-camera"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>الوصف </label>
+                  <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label> المدينة </label>
+                    <div class="form-group">
+                      <select class="form-control">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                      </select>
+                    </div>
+                  </div>
+                <div class="form-group">
+                    <label> المنطقة </label>
+                    <div class="form-group">
+                      <select class="form-control">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <button type="submit" class="btn-search float-left">حفظ</button>
+          </form>
+    </div>
+
+ 
+</div>
+
+{% endblock %}

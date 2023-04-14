@@ -1,0 +1,140 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+  = "offers" %} {% include "templates/components/header.njk" %} {% include
+  "templates/components/sidebar.njk" %}
+  
+  <div class="main-content">
+    <form>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>كود الطلب/العميل /رقم تلفون العميل </label>
+            <select class="form-control">
+              <option>مشكلة 1</option>
+              <option>مشكلة 2</option>
+              <option>مشكلة 3</option>
+              <option>مشكلة 4</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>الإسم</label>
+            <input type="text" class="form-control" placeholder="سنقر كفرالشيخ" />
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>كود الطلب/العميل /رقم تلفون العميل </label>
+            <select class="form-control">
+              <option>مشكلة 1</option>
+              <option>مشكلة 2</option>
+              <option>مشكلة 3</option>
+              <option>مشكلة 4</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>الإسم</label>
+            <input type="text" class="form-control" placeholder="سنقر كفرالشيخ" />
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn-search btn btn-primary btn-order">
+        بحث
+      </button>
+    </form>
+  
+  <div class="tabs-orderdash">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        id="tab-01"
+        data-toggle="tab"
+        href="#content-01"
+        role="tab"
+        aria-controls="content-01"
+        aria-selected="true"
+        >كفر الشيخ
+        <span class="new-count">3</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >طنطا
+        <span class="new-count">5</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-03"
+        data-toggle="tab"
+        href="#content-03"
+        role="tab"
+        aria-controls="contact"
+        aria-selected="false"
+        >الدقهلية
+        <span class="new-count">1</span>
+      </a>
+    </li>
+  </ul>
+</div>
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade show active"
+        id="content-01"
+        role="tabpanel"
+        aria-labelledby="tab-01"
+      >
+        <div class="row">
+          {% for i in range(0,20) -%}
+          <div class="col-md-3">
+            <div class="order-item order-pending">
+              <h5>#4035552</h5>
+              <ul class="order-content">
+                <li>وقت الطلب : <span>00:01:23</span></li>
+                <li>الوقت المتبقي : <span>00:01:23</span></li>
+                <li>كود الطيار : <span>321</span></li>
+                <li>حالة الطلب : <span>جارى التجهيز</span></li>
+                <li>المسافة : <span>7Km</span></li>
+                <li>الهاتف : <span>01012093500</span></li>
+              </ul>
+              <button type="submit" class="btn-detils btn btn-primary">
+                التفاصيل
+              </button>
+            </div>
+          </div>
+  
+          {%- endfor %}
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="content-02"
+        role="tabpanel"
+        aria-labelledby="tab-02"
+      >
+        ...
+      </div>
+      <div
+        class="tab-pane fade"
+        id="content-03"
+        role="tabpanel"
+        aria-labelledby="tab-03"
+      >
+        ...
+      </div>
+    </div>
+  </div>
+  
+  {% endblock %}
+  

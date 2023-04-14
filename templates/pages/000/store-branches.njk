@@ -1,0 +1,39 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+{% set page_title = "products" %} 
+{% include "templates/components/header.njk" %}
+{% include "templates/components/sidebar.njk" %}
+<div class="main-content">
+	<div class="table-card">
+	<div class="table-title">
+		<p>المنتجات</p>
+	</div>
+		<table id="table_id" class="display">
+				<thead>
+						<tr>
+								<th>اسم الفرع</th>
+								<th>اسم المفوض</th>
+								<th>المنطقة</th>
+								<th>رقم الهاتف</th>
+						</tr>
+				</thead>
+				<tbody>
+
+					{% for i in range(0,4) -%}
+						<tr>
+							<td>فرع #{{i}}</td>
+							<td>أحمد محمد على</td>
+							<td>كفر سعد</td>
+							<td>0123456789</td>
+						
+						</tr>
+					{%- endfor %}
+
+				</tbody>
+		</table>
+	</div>
+</div>
+
+
+{% endblock %}

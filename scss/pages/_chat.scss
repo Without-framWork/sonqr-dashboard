@@ -1,0 +1,138 @@
+.chat-slider {
+  .form-control {
+    padding: 0 40px !important;
+    border-radius: 10px;
+  }
+}
+.icon-search {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.messengers-list {
+  overflow-y: scroll;
+  border-radius: 10px;
+  border: 1px solid #c2c2c2;
+  list-style: none;
+  padding: 30px 0;
+  height: 100vh;
+  a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  li {
+    padding: 30px;
+    border-bottom: 1px solid #c2c2c2;
+    &.active {
+      background-color: rgba($color: #034a90, $alpha: 0.1);
+      border-right: 4px solid #034a90;
+    }
+  }
+  // height: 100%;
+}
+
+.number-messages {
+  background-color: #00488f;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fedd12;
+  font-size: 12px;
+  text-align: center;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 2px 0;
+}
+.sender-info {
+  p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #000000;
+  }
+}
+.messages-content {
+  color: #00488f !important;
+  margin-bottom: 0 !important;
+}
+.time-messages {
+  font-size: 14px;
+  color: #000000;
+}
+.chat-box {
+  border: 1px solid #c2c2c2;
+  border-radius: 10px;
+}
+.chat-content {
+  padding: 0 60px;
+}
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #c2c2c2;
+}
+.header-description,
+.sender,
+.recipient {
+  display: flex;
+  align-items: flex-end;
+//   align-items: center;
+}
+.chat-status {
+  margin-left: 40px;
+}
+.chat-controls {
+  a {
+    margin-right: 40px;
+  }
+}
+.chat-status {
+  p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000;
+  }
+  .activity-status {
+    color: #00488f;
+  }
+}
+.sender {
+  margin-bottom: 40px;
+  .image-box {
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+.chat-body {
+  padding: 50px 0;
+  height: 100vh;
+  overflow: auto;
+}
+.recipient {
+    margin-bottom: 40px;
+  justify-content: flex-end;
+  .message-text {
+    background-color: #e9ecef;
+    border-radius: 15px 15px 15px 0;
+    margin-right: 0;
+    margin-right: 50px;
+  }
+}
+
+.message-text {
+  background-color: #c4d4e5;
+  border-radius: 15px 15px 0 15px;
+  padding: 20px 30px;
+  color: #000814;
+  margin-left: 50px;
+  display: inline-block;
+  max-width: 50%;
+  // word-break: break-all;
+  
+}

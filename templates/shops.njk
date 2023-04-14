@@ -1,0 +1,1628 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="shops-page">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="tab-04"
+              data-toggle="tab"
+              href="#content-04"
+              role="tab"
+              aria-controls="content-01"
+              aria-selected="true"
+            >
+              بيانات المحل
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="tab-05"
+              data-toggle="tab"
+              href="#content-05"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              منتجات المحل
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="tab-06"
+              data-toggle="tab"
+              href="#content-06"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+            >
+              تعديل البيانات
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="content-04"
+          role="tabpanel"
+          aria-labelledby="tab-04"
+        >
+          <div class="col-md-12">
+            <div class="detils-resturant">
+              <div class="name-shop">
+                <p>أبو عوف للمنتجات الغذائية</p>
+                <span>مشويات-لحوم-أخرى </span>
+              </div>
+              <div class="shop-status">
+                <p>حالة المحل</p>
+
+                <label class="switch m-0">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+                <span class="active-status"> مفعل </span>
+              </div>
+              <div class="work-status">
+                <p>حالة العمل</p>
+                <div class="checks-radio">
+                  <form action="#">
+                  <div class="form-group">
+                    <div class="form__radio-group">
+                      <input
+                        type="radio"
+                        name="size"
+                        id="small"
+                        class="form__radio-input"
+                      />
+                      <label
+                        class="form__label-radio"
+                        for="small"
+                        class="form__radio-label"
+                      >
+                        <span class="form__radio-button"></span> مشغول
+                      </label>
+                    </div>
+                    <div class="form__radio-group">
+                      <input
+                        type="radio"
+                        name="size"
+                        id="large"
+                        class="form__radio-input"
+                        checked
+                      />
+                      <label
+                        class="form__label-radio"
+                        for="large"
+                        class="form__radio-label"
+                      >
+                        <span class="form__radio-button"></span> يعمل
+                      </label>
+                    </div>
+                    <div class="form__radio-group">
+                      <input
+                        type="radio"
+                        name="size"
+                        id="v-large"
+                        class="form__radio-input"
+                      />
+                      <label
+                        class="form__label-radio"
+                        for="v-large"
+                        class="form__radio-label"
+                      >
+                        <span class="form__radio-button"></span> مغلق
+                      </label>
+                    </div>
+                  </div>
+                  </form>
+                  <div class="detils-resturant-btn">
+                    <button type="submit" class="detils-resturant-btn-main">
+                      تحميل التقارير
+                    </button>
+                    <i class="icon-data fas fa-chart-pie"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detils-resturant-btn">
+            <button type="submit" class="detils-resturant-btn-main mb-4">
+              اضافه /تعديل تصنيف
+            </button>
+          </div>
+          <div class="additions">
+            <div class="addition-buttons">
+              <button type="submit" class="btn-addition">كفتة</button>
+              <button type="submit" class="btn-addition">سلطة</button>
+              <button type="submit" class="btn-addition">بدنجان</button>
+              <button type="submit" class="btn-addition">مخللات</button>
+              <button type="submit" class="btn-addition">مشروبات</button>
+              <button type="submit" class="btn-addition">حلا</button>
+              <button type="submit" class="btn-addition">
+                <i class="plus-icon fas fa-plus"></i>
+              </button>
+            </div>
+            <div class="detils-prouduct">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="tab-01"
+                    data-toggle="tab"
+                    href="#content-01"
+                    role="tab"
+                    aria-controls="content-01"
+                    aria-selected="true"
+                  >
+                    اضافه /تعديل منتج
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="tab-03"
+                    data-toggle="tab"
+                    href="#content-03"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >اضافه /تعديل الإضافات
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="content-01"
+                role="tabpanel"
+                aria-labelledby="tab-01"
+              >
+                <div class="table-prouduct">
+                  <table class="table order-table">
+                    <thead>
+                      <tr class="dd">
+                        <th scope="col">كود الصنف</th>
+                        <th scope="col">اسم الصنف</th>
+
+                        <th scope="col">الوصف</th>
+                        <th scope="col">الوحدة</th>
+                        <th scope="col">الوزن</th>
+                        <th scope="col">السعر</th>
+                        <th scope="col">صورة المنتج</th>
+                        <th scope="col">الاضافه</th>
+                        <th scope="col">التوافر</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        data-toggle="collapse"
+                        data-target="#demo1"
+                        class="accordion-toggle"
+                      >
+                        <th scope="row">32115</th>
+                        <td>كشرى التحرير</td>
+                        <td>علبه كشرى وسط</td>
+                        <td>علبة</td>
+                        <td>1</td>
+                        <td>10.50</td>
+                        <td>
+                          <img
+                            class="time"
+                            src=" assets/images/image-prouduct.png"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td>
+                          الاضافه
+                          <span class="icon-cog">
+                            <a href=""> <i class="fas fa-cogs"></i> </a
+                          ></span>
+                        </td>
+                        <td>
+                          <div class="detils-resturant mb-0">
+                            <div class="shop-status">
+                              <label class="switch m-0">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </td>
+
+                        <tfoot></tfoot>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">32115</th>
+                        <td>كشرى التحرير</td>
+                        <td>علبه كشرى وسط</td>
+                        <td>علبة</td>
+                        <td>1</td>
+                        <td>10.50</td>
+                        <td>
+                          <img
+                            class="time"
+                            src=" assets/images/image-prouduct.png"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td>
+                          الاضافه
+                          <span class="icon-cog">
+                            <a href=""> <i class="fas fa-cogs"></i> </a
+                          ></span>
+                        </td>
+                        <td>
+                          <div class="detils-resturant mb-0">
+                            <div class="shop-status">
+                              <label class="switch m-0">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">32115</th>
+                        <td>كشرى التحرير</td>
+                        <td>علبه كشرى وسط</td>
+                        <td>علبة</td>
+                        <td>1</td>
+                        <td>10.50</td>
+                        <td>
+                          <img
+                            class="time"
+                            src=" assets/images/image-prouduct.png"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td>
+                          الاضافه
+                          <span class="icon-cog">
+                            <a href=""> <i class="fas fa-cogs"></i> </a
+                          ></span>
+                        </td>
+
+                        <td>
+                          <div class="detils-resturant mb-0">
+                            <div class="shop-status">
+                              <label class="switch m-0">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">32115</th>
+                        <td>كشرى التحرير</td>
+                        <td>علبه كشرى وسط</td>
+                        <td>علبة</td>
+                        <td>1</td>
+                        <td>10.50</td>
+                        <td>
+                          <img
+                            class="time"
+                            src=" assets/images/image-prouduct.png"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td>
+                          الاضافه
+                          <span class="icon-cog">
+                            <a href=""> <i class="fas fa-cogs"></i> </a
+                          ></span>
+                        </td>
+                        <td>
+                          <div class="detils-resturant mb-0">
+                            <div class="shop-status">
+                              <label class="switch m-0">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">32115</th>
+                        <td>كشرى التحرير</td>
+                        <td>علبه كشرى وسط</td>
+                        <td>علبة</td>
+                        <td>1</td>
+                        <td>10.50</td>
+                        <td>
+                          <img
+                            class="time"
+                            src=" assets/images/image-prouduct.png"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td>
+                          الاضافه
+                          <span class="icon-cog">
+                            <a href=""> <i class="fas fa-cogs"></i> </a
+                          ></span>
+                        </td>
+                        <td>
+                          <div class="detils-resturant mb-0">
+                            <div class="shop-status">
+                              <label class="switch m-0">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="content-03"
+                role="tabpanel"
+                aria-labelledby="tab-03"
+              >
+                <div class="table-prouduct">
+                  <table class="table order-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">كود الصنف</th>
+                        <th scope="col">اسم الصنف</th>
+
+                        <th scope="col">الوصف</th>
+                        <th scope="col">الوحدة</th>
+                        <th scope="col">الوزن</th>
+                        <th scope="col">السعر</th>
+                        <th scope="col">صورة المنتج</th>
+                        <th scope="col">الاضافه</th>
+                        <th scope="col">التوافر</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">32115</th>
+                        <td>كشرى التحرير</td>
+                        <td>علبه كشرى وسط</td>
+                        <td>علبة</td>
+                        <td>1</td>
+                        <td>10.50</td>
+                        <td>
+                          <img
+                            class="time"
+                            src=" assets/images/image-prouduct.png"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td
+                          data-toggle="collapse"
+                          data-target="#demo1"
+                          class="accordion-toggle"
+                        >
+                          الاضافه
+                          <span class="icon-cogs">
+                            <i class="fas fa-cogs"></i>
+                          </span>
+                        </td>
+                        <td>
+                          <div class="detils-resturant mb-0">
+                            <div class="shop-status">
+                              <label class="switch m-0">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colspan-body" colspan="12">
+                          <div class="accordian-body collapse" id="demo1">
+                            <table class="table table-striped">
+                              <tbody>
+                                <tr
+                                  data-toggle="collapse"
+                                  class="accordion-toggle"
+                                >
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <h6>الإضافات المجانية</h6>
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div
+                                            class="
+                                              product-shopping-cart-quantity
+                                            "
+                                          >
+                                            <div class="quantity">
+                                              <button
+                                                class="dec quantity-button"
+                                              >
+                                                -
+                                              </button>
+                                              <input
+                                                class="quantity-input"
+                                                type="text"
+                                                value="2"
+                                              />
+                                              <button
+                                                class="inc quantity-button"
+                                              >
+                                                +
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="close-icons">
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <h6>الإضافات المدفوعة</h6>
+
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div class="close-icons">
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <h6>الازاله</h6>
+
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div class="close-icons">
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">32115</th>
+                        <td>كشرى التحرير</td>
+                        <td>علبه كشرى وسط</td>
+                        <td>علبة</td>
+                        <td>1</td>
+                        <td>10.50</td>
+                        <td>
+                          <img
+                            class="time"
+                            src=" assets/images/image-prouduct.png"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td
+                          data-toggle="collapse"
+                          data-target="#demo2"
+                          class="accordion-toggle"
+                        >
+                          الاضافه
+                          <span class="icon-cogs">
+                            <i class="fas fa-cogs"></i>
+                          </span>
+                        </td>
+                        <td>
+                          <div class="detils-resturant mb-0">
+                            <div class="shop-status">
+                              <label class="switch m-0">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colspan-body" colspan="12">
+                          <div class="accordian-body collapse" id="demo2">
+                            <table class="table table-striped">
+                              <tbody>
+                                <tr
+                                  data-toggle="collapse"
+                                  class="accordion-toggle"
+                                >
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <h6>الإضافات المجانية</h6>
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div
+                                            class="
+                                              product-shopping-cart-quantity
+                                            "
+                                          >
+                                            <div class="quantity">
+                                              <button
+                                                class="dec quantity-button"
+                                              >
+                                                -
+                                              </button>
+                                              <input
+                                                class="quantity-input"
+                                                type="text"
+                                                value="2"
+                                              />
+                                              <button
+                                                class="inc quantity-button"
+                                              >
+                                                +
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="close-icons">
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <h6>الإضافات المدفوعة</h6>
+
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div class="close-icons">
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <h6>الازاله</h6>
+
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div class="close-icons">
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">32115</th>
+                        <td>كشرى التحرير</td>
+                        <td>علبه كشرى وسط</td>
+                        <td>علبة</td>
+                        <td>1</td>
+                        <td>10.50</td>
+                        <td>
+                          <img
+                            class="time"
+                            src=" assets/images/image-prouduct.png"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td
+                          data-toggle="collapse"
+                          data-target="#demo3"
+                          class="accordion-toggle"
+                        >
+                          الاضافه
+                          <span class="icon-cogs">
+                            <i class="fas fa-cogs"></i>
+                          </span>
+                        </td>
+                        <td>
+                          <div class="detils-resturant mb-0">
+                            <div class="shop-status">
+                              <label class="switch m-0">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colspan-body" colspan="12">
+                          <div class="accordian-body collapse" id="demo3">
+                            <table class="table table-striped">
+                              <tbody>
+                                <tr
+                                  data-toggle="collapse"
+                                  class="accordion-toggle"
+                                >
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <h6>الإضافات المجانية</h6>
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div
+                                            class="
+                                              product-shopping-cart-quantity
+                                            "
+                                          >
+                                            <div class="quantity">
+                                              <button
+                                                class="dec quantity-button"
+                                              >
+                                                -
+                                              </button>
+                                              <input
+                                                class="quantity-input"
+                                                type="text"
+                                                value="2"
+                                              />
+                                              <button
+                                                class="inc quantity-button"
+                                              >
+                                                +
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="close-icons">
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <h6>الإضافات المدفوعة</h6>
+
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div class="close-icons">
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <span class="edit-additions"
+                                                >......</span
+                                              >
+
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <td colspan="1">
+                                    <div class="kinds-additions">
+                                      <h6>الازاله</h6>
+
+                                      <div class="additions">
+                                        <div class="additions-details">
+                                          <ul>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch1"
+                                                id="ch1"
+                                                value="1"
+                                                checked="checked"
+                                              />
+                                              <label for="ch1">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch2"
+                                                id="ch2"
+                                                value="2"
+                                              />
+                                              <label for="ch2"
+                                                >بدنجان مخلل ضازه
+                                              </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">بصل اخضر </label>
+                                            </li>
+                                            <li class="checkbox">
+                                              <input
+                                                type="checkbox"
+                                                name="ch3"
+                                                id="ch3"
+                                                value="3"
+                                              />
+                                              <label for="ch3">
+                                                بصل اخضر
+                                              </label>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="additions-details">
+                                          <div class="close-icons">
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <p>
+                                              <a href="#"
+                                                ><i
+                                                  class="far fa-times-circle"
+                                                ></i
+                                              ></a>
+                                            </p>
+                                            <div class="addition-buttons mb-0">
+                                              <button
+                                                type="submit"
+                                                class="
+                                                  btn-addition
+                                                  addition-btn-shop
+                                                "
+                                              >
+                                                <i
+                                                  class="plus-icon fas fa-plus"
+                                                ></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="content-05"
+          role="tabpanel"
+          aria-labelledby="tab-05"
+        ></div>
+
+        <div
+          class="tab-pane fade"
+          id="content-06"
+          role="tabpanel"
+          aria-labelledby="tab-06"
+        ></div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="phone">
+        <div class="phone-style">
+          <div class="bg-head-phone">
+            <img
+              class="time"
+              src=" assets/images/time-network.png"
+              alt=""
+              srcset=""
+            />
+            <div class="image-chicken">
+              <img src="assets/images/chicken-img.png" alt="" srcset="" />
+            </div>
+            <div class="logo-resturant">
+              <img src="assets/images/brand-logo.png" alt="" srcset="" />
+              <p class="name-resturant">مطعم باب الحارة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+</div>

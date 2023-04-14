@@ -1,0 +1,1420 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <form class="form-details" data-parsley-validate>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>رقم الطلب</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>معرف المتجر</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>معرف التسليم</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <!-- <div class="form-group">
+          <label>كود العميل</label>
+          <input type="text" class="form-control" />
+        </div> -->
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label> كود العميل</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>بداية التاريخ</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>نهاية التاريخ</label>
+          <input type="text" class="form-control" required minlength="5" />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <button type="submit" class="btn-search btn btn-primary btn-block">
+          بحث
+        </button>
+      </div>
+    </div>
+  </form>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        id="tab-01"
+        data-toggle="tab"
+        href="#content-01"
+        role="tab"
+        aria-controls="content-01"
+        aria-selected="true"
+      >
+        كل المحافظات
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-03"
+        data-toggle="tab"
+        href="#content-03"
+        role="tab"
+        aria-controls="content-03"
+        aria-selected="true"
+        >كفر الشيخ
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-04"
+        data-toggle="tab"
+        href="#content-04"
+        role="tab"
+        aria-controls="content-04"
+        aria-selected="true"
+      >
+        الاسكندريه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-05"
+        data-toggle="tab"
+        href="#content-05"
+        role="tab"
+        aria-controls="content-05"
+        aria-selected="true"
+        >الدقهليه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-06"
+        data-toggle="tab"
+        href="#content-06"
+        role="tab"
+        aria-controls="content-06"
+        aria-selected="true"
+      >
+        البحر الأحمر
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-07"
+        data-toggle="tab"
+        href="#content-07"
+        role="tab"
+        aria-controls="content-07"
+        aria-selected="true"
+      >
+        البحر الأحمر
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-08"
+        data-toggle="tab"
+        href="#content-08"
+        role="tab"
+        aria-controls="content-08"
+        aria-selected="true"
+      >
+        الجيزه
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-09"
+        data-toggle="tab"
+        href="#content-09"
+        role="tab"
+        aria-controls="content-09"
+        aria-selected="true"
+        >كفر الشيخ
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-10"
+        data-toggle="tab"
+        href="#content-10"
+        role="tab"
+        aria-controls="content-10"
+        aria-selected="true"
+      >
+        الغربيه
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-10"
+        data-toggle="tab"
+        href="#content-11"
+        role="tab"
+        aria-controls="content-11"
+        aria-selected="true"
+      >
+        المنوفيه
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >كفر الشيخ
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="tab-02"
+        data-toggle="tab"
+        href="#content-02"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        >كفر الشيخ
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="content-01"
+      role="tabpanel"
+      aria-lab
+      elledby="tab-01"
+    >
+      <div class="order-infro">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="tab-13"
+              data-toggle="tab"
+              href="#content-13"
+              role="tab"
+              aria-controls="content-13"
+              aria-selected="true"
+            >
+              الطلبات
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="tab-14"
+              data-toggle="tab"
+              href="#content-14"
+              role="tab"
+              aria-controls="content-14"
+              aria-selected="true"
+              >الخريطة
+            </a>
+          </li>
+        </ul>
+        <div class="problem-order">
+          <div class="main-order order-equip">
+            <span class="title-order"> التجهيز</span>
+            <span class="number-problem">15</span>
+          </div>
+          <div class="main-order order-late">
+            <span class="title-order">تأخير</span>
+            <span class="number-problem">15</span>
+          </div>
+          <div class="main-order order-problems mb-0">
+            <span class="title-order">مشكلة </span>
+            <span class="number-problem">15</span>
+          </div>
+          <div class="main-order order-urgents">
+            <span class="title-order">مستعجل</span>
+            <span class="number-problem">15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="content-13"
+          role="tabpane-13"
+          aria-lab
+          elledby="tab-13"
+        >
+          <div class="row">
+            <div class="col-lg-9 col-md-12">
+              <div class="row">
+                {% for i in range(0,10) -%}
+                <div class="col-lg-4 col-md-6">
+                  <div class="order-item order-pending">
+                    <button type="submit" class="btn-detils btn-detils-laotop-show">
+                      الدليفري استلم طلبك
+                    </button>
+        
+                    <ul class="order-content order-content-pending">
+                      <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                        الدليفري استلم طلبك
+                      </button>
+                      <h5>#4035552</h5>
+        
+                      <li>عربه التسوق</li>
+                      <li>01:23 , <span>4-10-2021 </span></li>
+        
+                      <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                        الدليفري استلم طلبك
+                      </button>
+                    </ul>
+                    <ul class="order-content order-content-pending">
+                      <h5>العميل<span class="mr-2"> #4035552</span></h5>
+        
+                      <li class="d-flex justify-content-between">
+                        مني مصطفي<span class="client-number">01069548715</span>
+                      </li>
+                    </ul>
+                    <ul class="order-content order-content-last border-bottom-0 mb-4">
+                      <h5>التوصيل</h5>
+                      <li>اسم المحل : <span>القواس - #718 </span></li>
+                      <li>اسم الدليفري : : <span>محمد محمد </span></li>
+                      <li>المسافة : <span>المسافة : 7 كم </span></li>
+                      <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li> 
+                    </ul>
+                    <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="order-item order-complete">
+                    <button type="submit" class="btn-detils btn-detils-laotop-show">
+                      الدليفري استلم طلبك
+                    </button>
+        
+                    <ul class="order-content">
+                      <h5>#4035552</h5>
+        
+                      <li>عربه التسوق</li>
+                      <li>01:23 , <span>4-10-2021 </span></li>
+        
+                      <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                        الدليفري استلم طلبك
+                      </button>
+                    </ul>
+                    <ul class="order-content">
+                      <h5>العميل<span class="mr-2"> #4035552</span></h5>
+                      <li class="d-flex justify-content-between">
+                        مني مصطفي<span class="client-number">01069548715</span>
+                      </li>
+                    </ul>
+                    <ul class="order-content order-content-last border-bottom-0 mb-4">
+                      <h5>التوصيل</h5>
+                      <li>اسم المحل : <span>القواس - #718 </span></li>
+                      <li>اسم الدليفري : : <span>محمد محمد </span></li>
+                      <li>المسافة : <span>المسافة : 7 كم </span></li>
+                      <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+                    </ul>
+                    <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="order-item order-cancel">
+                    <div class="button-status">
+                      <button type="submit" class="btn-detils btn-detils-laotop-show">
+                        الدليفري استلم طلبك
+                      </button>
+                    </div>
+        
+                    <ul class="order-content order-content-cancel">
+                      <h5>#4035552</h5>
+        
+                      <li>عربه التسوق</li>
+                      <li>01:23 , <span>4-10-2021 </span></li>
+                      <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                        الدليفري استلم طلبك
+                      </button>
+                    </ul>
+                    <ul class="order-content pt-3 order-content-cancel">
+                      <h5>العميل<span class="mr-2"> #4035552</span></h5>
+        
+                      <li class="d-flex justify-content-between">
+                        مني مصطفي<span class="client-number">01069548715</span>
+                      </li>
+                    </ul>
+                    <ul class="order-content order-content-last border-bottom-0 mb-4">
+                      <h5>التوصيل</h5>
+                      <li>اسم المحل : <span>القواس - #718 </span></li>
+                      <li>اسم الدليفري : : <span>محمد محمد </span></li>
+                      <li>المسافة : <span>المسافة : 7 كم </span></li>
+                      <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+                    </ul>
+                    <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="order-item order-urgent">
+                    <div class="button-status">
+                      <button type="submit" class="btn-detils btn-detils-laotop-show">
+                        الدليفري استلم طلبك
+                      </button>
+                    </div>
+                    <ul class="order-content order-content-urgent">
+                      <h5>#4035552</h5>
+        
+                      <li>عربه التسوق</li>
+                      <li>01:23 , <span>4-10-2021 </span></li>
+        
+                      <button type="submit" class="btn-detils btn-detils-laotop-hide">
+                        الدليفري استلم طلبك
+                      </button>
+                    </ul>
+                    <ul class="order-content order-content-urgent">
+                      <h5>العميل<span class="mr-2"> #4035552</span></h5>
+        
+                      <li class="d-flex justify-content-between">
+                        مني مصطفي<span class="client-number">01069548715</span>
+                      </li>
+                    </ul>
+                    <ul class="order-content order-content-last border-bottom-0 mb-4">
+                      <h5>التوصيل</h5>
+                      <li>اسم المحل : <span>القواس - #718 </span></li>
+                      <li>اسم الدليفري : : <span>محمد محمد </span></li>
+                      <li>المسافة : <span>المسافة : 7 كم </span></li>
+                      <li>العنوان : <span> دمياط الجديدة ، دمياط ، مصر</span></li>
+                    </ul>
+                    <button type="submit" class="btn-detils btn-block">التفاصيل</button>
+                  </div>
+                </div>
+                {%- endfor %}
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <div class="flyer-slider">
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show"
+          id="content-14"
+          role="tabpane-14"
+          aria-lab
+          elledby="tab-14"
+        >
+          <div class="row">
+            <div class="col-md-9">
+              <div class="gmap_canvas">
+                <iframe
+                  width="100%"
+                  height="650px"
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe>
+                {# <a href="https://getasearch.com/nordvpn-coupon/"></a><br />
+                #}
+                <style>
+                  /* .mapouter {
+                  position: relative;
+                  text-align: right;
+                  height: 300px;
+                  width: 100%;
+              } */
+                </style>
+                {#
+                <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                #}
+                <!-- <style>
+              .gmap_canvas {
+                  overflow: hidden;
+                  background: none!important;
+                  height: 300px;
+                  width: 100%;
+              }
+          </style> -->
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flyer-slider">
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="poilt-infro">
+                  <div class="flyers">
+                    <div class="flyer-about">
+                      <p class="flyer-code">#125</p>
+                      <p class="flyer-name">محمد محمد</p>
+                      <p class="flyer-number">01084978532</p>
+                    </div>
+                    <div class="image-flyer">
+                      <img
+                        class="image-flyer"
+                        src=" assets/images/image-flyer.png"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-status">
+                    <div class="order-complete">
+                      <p>المنفذ</p>
+                      <span>5</span>
+                    </div>
+                    <div class="order-cancel">
+                      <p>الملغى</p>
+                      <span>2</span>
+                    </div>
+                    <div class="order-nots">
+                      <p>الملاحظات</p>
+                      <span>12</span>
+                    </div>
+                  </div>
+                  <div class="nearby-orders">
+                    <h5>الطلبات القريبة</h5>
+                    <div class="code-order">
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                      <p>#4035552</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="content-02"
+      role="tabpanel"
+      aria-labelledby="tab-02"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-03"
+      role="tabpanel"
+      aria-labelledby="tab-03"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-04"
+      role="tabpanel"
+      aria-labelledby="tab-04"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-05"
+      role="tabpanel"
+      aria-labelledby="tab-05"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-06"
+      role="tabpanel"
+      aria-labelledby="tab-06"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-07"
+      role="tabpanel"
+      aria-labelledby="tab-07"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-08"
+      role="tabpanel"
+      aria-labelledby="tab-08"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-09"
+      role="tabpanel"
+      aria-labelledby="tab-09"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-10"
+      role="tabpanel"
+      aria-labelledby="tab-10"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-11"
+      role="tabpanel"
+      aria-labelledby="tab-11"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="content-12"
+      role="tabpanel"
+      aria-labelledby="tab-12"
+    >
+      ...
+    </div>
+  </div>
+
+  {% endblock %}
+</div>

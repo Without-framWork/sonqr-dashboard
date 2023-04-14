@@ -1,0 +1,257 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+
+<div class="main-content">
+  <div class="shipping-page">
+    <h5 class="order-code">طلب #42</h5>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="order-infro">
+        <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="tab-13"
+              data-toggle="tab"
+              href="#content-13"
+              role="tab"
+              aria-controls="content-13"
+              aria-selected="true"
+            >
+              بيانات الطلب
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="tab-14"
+              data-toggle="tab"
+              href="#content-14"
+              role="tab"
+              aria-controls="content-14"
+              aria-selected="true"
+            >
+              خريطة
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="tab-15"
+              data-toggle="tab"
+              href="#content-15"
+              role="tab"
+              aria-controls="content-15"
+              aria-selected="true"
+            >
+              سجل
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="content-13"
+          role="tabpane-13"
+          aria-lab
+          elledby="tab-13"
+        >
+          <div class="row">
+            <div class=" col-lg-4 col-md-6 common-distance">
+              <div class="client-box">
+                <ul class="client-info">
+                  <h5>الشحن<span class="mr-2"> #42</span></h5>
+
+                  <li class="status">
+                    <p class="successful">
+                      الحالة : <span class="client-number"> شحنة جديدة</span>
+                    </p>
+                  </li>
+                  <li>رمز الكوبون: <span> 1564775 </span></li>
+                </ul>
+                <div class="notes">
+                  <h5 class="mt-2">ملاحظات</h5>
+                </div>
+                <div class="administrator-note border-0">
+                  <h5 class="mt-2">ملاحظة المسؤول</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 common-distance">
+              <div class="client-box">
+                <ul class="client-info border-0">
+                  <h5>العميل<span class="mr-2"> #4035552</span></h5>
+                  <li>الاسم : <span>مني مصطفي </span></li>
+                  <li>الرقم : <span>01069548715 </span></li>
+
+                  <li class="status">
+                    <p class="successful">
+                      طلب ناجح : <span class="client-number"> 160</span>
+                    </p>
+                  </li>
+                  <li>المدينة : <span> المدينة </span></li>
+                  <li>المحافظة : <span> الدقهلية </span></li>
+                  <li>
+                    العنوان :
+                    <span>
+                      26 محمد المقريف ، المنطقة السادسة ، مدينة نصر ، محافظة
+                      القاهرة ، مصر
+                    </span>
+                  </li>
+                </ul>
+                <button type="submit" class="btn btn-primary btn-shadow">
+                  عرض العنوان
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 common-distance">
+              <div class="client-box">
+                <ul class="client-info border-0">
+                  <h5>العميل<span class="mr-2"> #4035552</span></h5>
+                  <li>الاسم : <span>مني مصطفي </span></li>
+                  <li>الرقم : <span>01069548715 </span></li>
+                  <li>رقم آخر : <span>01069548715 </span></li>
+
+                  <li>المدينة : <span> المدينة </span></li>
+                  <li>المحافظة : <span> الدقهلية </span></li>
+                  <li>
+                    العنوان :
+                    <span>
+                      26 محمد المقريف ، المنطقة السادسة ، مدينة نصر ، محافظة
+                      القاهرة ، مصر
+                    </span>
+                  </li>
+                </ul>
+                <button type="submit" class="btn btn-primary btn-shadow">
+                  عرض العنوان
+                </button>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="shop-box">
+                <h6>تفاصيل الشحن</h6>
+
+                <ul class="shop-list">
+                  <li>التاريخ : <span>01:23,4-8-2021 </span></li>
+                  <li>نوع الطلب : <span> مكتوب</span></li>
+                  <li>الوزن : <span>5 </span></li>
+                  <li>الوحدة : <span>كجم</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="shop-box">
+                <h6>المحل</h6>
+
+                <ul class="shop-list">
+                  <li>نوع الدفع : <span> كاش عند التسليم </span></li>
+                  <li>السعر : <span> 50 ج.م </span></li>
+                  <li>الشحن : <span>10 ج.م </span></li>
+                  <li>الخصم : <span> 0 ج.م </span></li>
+                  <li>مدفوع : <span> 0 ج.م </span></li>
+                  <li>الإجمالي : <span> 60 ج.م</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="options-btns status-btn">
+                <button type="submit" class="btn btn-primary btn-shadow">
+                  قبول الطلب
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-shadow btn-reject"
+                >
+                  رفض الطلب
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade show"
+          id="content-14"
+          role="tabpane-14"
+          aria-lab
+          elledby="tab-14"
+        >
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+                width="100%"
+                height="800px"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
+              <a href="https://getasearch.com/nordvpn-coupon/"></a><br />
+              <style>
+                .mapouter {
+                  position: relative;
+                  text-align: right;
+                  height: 480px;
+                  width: 100%;
+                }
+              </style>
+              <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+              <style>
+                .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                  height: 480px;
+                  width: 100%;
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show"
+          id="content-15"
+          role="tabpane-15"
+          aria-lab
+          elledby="tab-15"
+        ></div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="order-time">
+        <h5>مده الطلب</h5>
+        <span class="actual-time">00:45:30</span>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary btn-shadow">
+            ارسال اشعار للعميل
+          </button>
+          <button type="submit" class="btn btn-primary btn-shadow">
+            ارسال رسائل قصيره للعميل
+          </button>
+
+          <button type="submit" class="btn btn-primary btn-shadow">
+            أضف كوبون
+          </button>
+          <button type="submit" class="btn btn-primary btn-shadow">
+            أضف ملاحظة
+          </button>
+          <button type="submit" class="btn btn-primary btn-shadow">
+            مراجعة
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+
+  {% endblock %}
+</div>

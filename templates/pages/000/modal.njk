@@ -1,0 +1,122 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+		{% set page_title = "settings" %}
+		{% include "templates/components/header.njk" %}
+		{% include "templates/components/sidebar.njk" %}
+
+		<div class="main-content">
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+					تفاصيل الطلب
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade order-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+										<div class="modal-body">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+												</button>
+												<div class="order-header">
+													<h3>
+														<span class=order-desc>تفاصيل الطلب</span>
+														<span class=order-no>#123549</span>
+													</h3>
+													
+													<span class="order-time">
+															<span>12:02:13 PM</span>
+															<span>24/03/2020</span>
+													</span>
+												</div>
+											
+
+						
+
+												<div class="order-client">
+														<h4 class="title-icon">
+															<i class="fas fa-info-circle"></i>
+															<span>بيانات العميل</span>
+														</h4>
+														<ul class="client-info">
+
+																<li>
+																		<i class="fas fa-user"></i>
+																		<span>أحمد محمد على</span>
+																</li>
+																<li>
+																		<i class="fas fa-tags"></i>
+																		<span>350 ج.م</span></li>
+																<li>
+																		<i class="far fa-credit-card"></i>
+																		<span>تم الدفع ( بطاقه دفع )</span>
+																</li>
+																<li>
+																		<i class="fas fa-map-marker-alt"></i>
+																		<span>شارع 14 أحمد فهمى ابراهيم متفرع من المحمدي - ميامي - الأسكندرية</span>
+																</li>
+														</ul>
+
+												</div>
+
+												<div class="order-products">
+														<h4 class="title-icon">
+															<i class="fas fa-info-circle"></i>
+															<span>بيانات العميل</span>
+														</h4>
+
+														<table class="table">
+																<thead>
+																		<tr>
+																				<th scope="col">الصورة</th>
+																				<th scope="col">اسم المنتج</th>
+																				<th scope="col">الكمية</th>
+																				<th scope="col">السعر</th>
+																		</tr>
+																</thead>
+																<tbody>
+
+																		{% for i in range(1, 5) -%}
+																				<tr>
+																						<th scope="row"> 	<img src="assets/images/products/product-0{{i}}.png" alt=""></th>
+																						<td>فراخ مشوية طازجة</td>
+																						<td>1</td>
+																						<td>50 ج.م</td>
+																				</tr>
+																		{%- endfor %}
+
+																</tbody>
+														</table>
+
+												</div>
+
+												<div class="order-summary">
+														<ul class="summary-items">
+																<li>
+																		<span class="item-name">المبلغ</span>
+																		<span class="item-cost">350 ج.م</span>
+																</li>
+																<li>
+																		<span class="item-name">رسوم التوصيل</span>
+																		<span class="item-cost">50 ج.م</span>
+																</li>
+																<li>
+																		<span class="item-name">الخصم (R80)</span>
+																		<span class="item-cost">50 ج.م</span>
+																</li>
+														</ul>
+														<div class="summary-total">
+																<span class="item-name">إجمالي المبلغ</span>
+																<span class="item-cost">450 ج.م</span>
+														</div>
+												</div>
+
+										</div>
+
+								</div>
+						</div>
+				</div>
+		</div>
+
+{% endblock %}

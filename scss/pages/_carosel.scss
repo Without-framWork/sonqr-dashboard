@@ -1,0 +1,117 @@
+.owl-nav.disabled {
+  display: block !important;
+}
+.owl-theme .owl-dots {
+  display: none;
+}
+
+.owl-nav button.owl-prev {
+  position: absolute;
+  top: 10px;
+  right: -25px;
+  outline: 0;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  span {
+    font-size: 30px;
+    color: #000000;
+  }
+}
+.owl-theme .owl-nav [class*="owl-"] {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff !important;
+  color: #c2c2c2;
+  border-radius: 50%;
+  box-shadow: (0px 4px 16px rgba(0, 0, 0, 0.16));
+  top: 70px;
+}
+.owl-nav button.owl-next {
+  position: absolute;
+  top: 10px;
+  left: -25px;
+  outline: 0;
+  font-size: 30px;
+  span {
+    font-size: 30px;
+    color: #000000;
+  }
+}
+
+.owl-carousel {
+  .details-city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    .status {
+      margin-bottom: 0;
+    }
+  }
+}
+.owl-nav button.owl-prev span,
+.owl-nav button.owl-next span {
+  font-size: 40px;
+  display: block;
+  position: relative;
+  top: -8px;
+}
+.city-infro {
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: (0px 4px 16px rgba(0, 0, 0, 0.05));
+
+  h4 {
+    font-size: 20px;
+    height: 40px;
+    text-align: center;
+    line-height: 34px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #444444;
+  }
+}
+.number-Works {
+  font-size: 16px;
+  font-weight: bold;
+  color: #202020;
+}
+.total-works {
+  .fa {
+    font-size: 14px;
+    color: #5ecfff;
+  }
+}
+.not-work {
+  .fa {
+    font-size: 14px;
+    color: #e328af;
+  }
+}
+.total-works {
+  display: flex;
+  justify-content: space-evenly;
+  .infro-total-work {
+    display: block;
+    margin: auto;
+    // margin-left: 25px;
+  }
+  .apexcharts-canvas {
+    width: 102px;
+  }
+
+  svg {
+    height: 96px;
+  }
+
+  .apexcharts-datalabels-group {
+    opacity: 0 !important;
+  }
+  .apexcharts-series.apexcharts-radial-series {
+    path {
+      stroke: rgba(151, 0, 251, 0.85);
+    }
+  }
+}

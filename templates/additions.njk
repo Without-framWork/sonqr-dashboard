@@ -1,0 +1,300 @@
+{% extends "templates/layouts/app.html" %} {% block content %} {% set page_title
+= "offers" %} {% include "templates/components/header.njk" %} {% include
+"templates/components/sidebar.njk" %}
+<div class="main-content">
+  <button type="submit" class="btn-search btn-add">إضافة منتج</button>
+
+  <div class="order-infro mt-5">
+    <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="tab-13"
+          data-toggle="tab"
+          href="#content-13"
+          role="tab"
+          aria-controls="content-13"
+          aria-selected="true"
+        >
+          المدفوعة
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="tab-14"
+          data-toggle="tab"
+          href="#content-14"
+          role="tab"
+          aria-controls="content-14"
+          aria-selected="true"
+        >
+          المجانية
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="tab-15"
+          data-toggle="tab"
+          href="#content-15"
+          role="tab"
+          aria-controls="content-15"
+          aria-selected="true"
+        >
+          الإزالات
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="content-13"
+      role="tabpane-13"
+      aria-lab
+      elledby="tab-13"
+    >
+      <table class="table table-responsive-sm order-table">
+        <thead>
+          <tr>
+            <th scope="col">كود الصنف</th>
+            <th scope="col">اسم الصنف</th>
+            <th scope="col">السعر</th>
+            <th scope="col">النوع</th>
+            <th scope="col">التوافر</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>مدفوعة</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>مدفوعة</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>مدفوعة</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>مدفوعة</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>مدفوعة</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div
+      class="tab-pane fade show"
+      id="content-14"
+      role="tabpane-14"
+      aria-lab
+      elledby="tab-14"
+    >
+      <table class="table table-responsive-sm order-table">
+        <thead>
+          <tr>
+            <th scope="col">كود الصنف</th>
+            <th scope="col">اسم الصنف</th>
+            <th scope="col">السعر</th>
+            <th scope="col">النوع</th>
+            <th scope="col">التوافر</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>المجانية</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>المجانية</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>المجانية</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>المجانية</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>المجانية</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="tab-pane fade show"
+      id="content-15"
+      role="tabpane-15"
+      aria-lab
+      elledby="tab-15"
+    >
+      <table class="table table-responsive-sm order-table">
+        <thead>
+          <tr>
+            <th scope="col">كود الصنف</th>
+            <th scope="col">اسم الصنف</th>
+            <th scope="col">السعر</th>
+            <th scope="col">النوع</th>
+            <th scope="col">التوافر</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>الإزالات</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>الإزالات</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>الإزالات</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>الإزالات</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3542225</th>
+            <td>كشرى التحرير</td>
+            <td>10.50</td>
+            <td>الإزالات</td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+{% set page_title = "current-orders" %} 
+{% include "templates/components/header.njk" %}
+{% include "templates/components/sidebar.njk" %}
+
+<div class="main-content">
+<button class="btn btn-main">إضافة منتج</button>
+	<div class="table-card">
+	<div class="table-title">
+		<p>المنتجات</p>
+	</div>
+		<table id="table_id" class="display">
+				<thead>
+						<tr>
+								<th>رقم الطلب</th>
+								<th>المنتج</th>
+								<th>قيمة الطلب</th>
+								<th>تاريخ الطلب</th>
+								<th>طريقة الدفع</th>
+								<th>حالة الطلب</th>
+								<th></th>
+						</tr>
+				</thead>
+				<tbody>
+
+					{% for i in range(0, 40) -%}
+						<tr>
+							<td>#123549</td>
+							<td>أحمد محمد على</td>
+							<td>120.00</td>
+							<td>16/06/2021</td>
+							<td>كاش</td>
+							<td>تم الطلب</td>
+							<td></td>
+						</tr>
+					{%- endfor %}
+
+				</tbody>
+		</table>
+	</div>
+</div>
+
+
+{% endblock %}

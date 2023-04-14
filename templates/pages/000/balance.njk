@@ -1,0 +1,109 @@
+{% extends "templates/layouts/app.html" %}
+
+{% block content %}
+{% set page_title = "products" %} 
+{% include "templates/components/header.njk" %}
+{% include "templates/components/sidebar.njk" %}
+<div class="main-content">
+	<h2 class="page-title">رصيد الطلبات</h2>
+	<div class="row">
+
+		<div class="col-md-4">
+			<div class="info-box">
+				<div class="info-content">
+					<span class="info-title">العمليات الناجحة</span>
+					<span class="info-number">6,443</span>
+					<span class="info-status">-10.45</span>
+				</div>
+				<div class="info-chart">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="info-box">
+				<div class="info-content">
+					<span class="info-title">العمليات الناجحة</span>
+					<span class="info-number">6,443</span>
+					<span class="info-status">-10.45</span>
+				</div>
+				<div class="info-chart">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="info-box">
+				<div class="info-content">
+					<span class="info-title">العمليات الناجحة</span>
+					<span class="info-number">6,443</span>
+					<span class="info-status">-10.45</span>
+				</div>
+				<div class="info-chart">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="info-box">
+				<div class="info-content">
+					<span class="info-title">العمليات الناجحة</span>
+					<span class="info-number">6,443</span>
+					<span class="info-status">-10.45</span>
+				</div>
+				<div class="info-chart">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="info-box">
+				<div class="info-content">
+					<span class="info-title">العمليات الناجحة</span>
+					<span class="info-number">6,443</span>
+					<span class="info-status">-10.45</span>
+				</div>
+				<div class="info-chart">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="info-box">
+				<div class="info-content">
+					<span class="info-title">العمليات الناجحة</span>
+					<span class="info-number">6,443</span>
+					<span class="info-status">-10.45</span>
+				</div>
+				<div class="info-chart">
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="table-card">
+
+		<table id="table_id" class="display">
+				<thead>
+						<tr>
+								<th>رقم الطلب</th>
+								<th>اسم العميل</th>
+								<th>تاريخ الطلب</th>
+								<th>قيمة الطلب</th>
+						</tr>
+				</thead>
+				<tbody>
+
+					{% for i in range(0, 40) -%}
+						<tr>
+							<td>#123549</td>
+							<td>أحمد محمد على</td>
+							<td>16/06/2021</td>
+							<td>
+								<span class="balance-status plus">1200.00</span>
+							</td>
+						</tr>
+					{%- endfor %}
+
+				</tbody>
+		</table>
+	</div>
+</div>
+
+
+{% endblock %}

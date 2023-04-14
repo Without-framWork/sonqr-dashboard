@@ -1,0 +1,68 @@
+.login-bg {
+  position: absolute;
+  left: 0;
+  top: -50px;
+}
+.login-logo {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 200px;
+}
+
+.login-card {
+  margin: 0 auto;
+  margin-bottom: 0px;
+  padding: 50px 65px;
+  margin-bottom: 100px;
+  width: 560px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
+  background: #f8f9fa;
+  border-radius: 24px;
+  border-radius: 10px;
+}
+.login-card {
+  .form-control{
+    background: #ffffff;
+    border-color: #dee2e6;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    text-align: left;
+    padding: 0 60px;
+  
+  } 
+  label{
+    margin-right: 35px;
+  }
+
+}
+
+
+
+.btn-primary.btn-login {
+  height: 48px;
+  border-radius: 24px;
+  background: #00488f;
+  padding: 0 40px;
+  border-color: #00488f;
+  margin-bottom: 0;
+}
+.login-form .icon-email,
+.login-form .icon-lock {
+  position: absolute;
+  top: 15px;
+  left: 23px;
+  cursor: pointer;
+}
+.login-form .icon-check,
+.login-form .icon-eye {
+  position: absolute;
+  top: 15px;
+  right: 23px;
+  color: #00488f;
+  cursor: pointer;
+}
+
+.copyrights {
+  text-align: center;
+  
+}

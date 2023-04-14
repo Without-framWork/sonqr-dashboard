@@ -1,0 +1,137 @@
+.setting-btns {
+  h5 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+    // margin-bottom: 20px;
+  }
+}
+.link-setting {
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+  height: 30px;
+  background: #ffffff;
+  border: 0.5px solid #c2c2c2;
+  color: #00488f;
+  line-height: 30px;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    background-color: #00488f;
+    color: #ffffff;
+    border-color: #ffffff;
+    text-decoration: none;
+  }
+}
+.btn-setting {
+  margin-bottom: 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+  height: 30px;
+  background: #FFFFFF;
+  border: 0.5px solid #C2C2C2;
+  color: #00488F;
+  &:focus{
+    outline: 0
+
+  }
+  &:hover{
+    background-color: #00488F;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+     }
+
+  }
+  
+
+.btn-remove {
+  color: #f90101;
+}
+.customer-numbers {
+  background-color: #f8f8f8;
+  border: none;
+  display: block;
+  line-height: 50px;
+  padding: 0 50px;
+  margin: auto;
+  text-align: center;
+  height: 48px;
+  border-radius: 8px;
+  color: #00488f;
+  float: right;
+  span {
+    margin-right: 15px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.box-content {
+  margin-top: 25px;
+}
+.customer-box {
+  border-radius: 15px;
+  border: 1px solid #757575;
+  padding: 30px;
+  margin-bottom: 30px;
+  .client-info {
+    min-height: 340px;
+  }
+}
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+//agents
+.regions {
+  text-align: center;
+  padding: 25px 0;
+  a {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    // line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+.agent-box {
+  height: auto;
+  margin-bottom: 40px;
+  .client-info {
+    min-height: 200px;
+    margin-bottom: 20px;
+  }
+}
+//agents
+.order-code {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.agent-box{
+  height: auto;
+  margin-bottom: 30px;
+}
+//shipping
+.notes,
+.administrator-note {
+  border-bottom: 1px solid #c2c2c2;
+  //  min-height: 100px;
+}
+
+//shipping
